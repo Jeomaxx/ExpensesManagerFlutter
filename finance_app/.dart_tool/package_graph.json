@@ -1100,6 +1100,26 @@
       ]
     },
     {
+      "name": "html",
+      "version": "0.15.6",
+      "dependencies": [
+        "csslib",
+        "source_span"
+      ]
+    },
+    {
+      "name": "charcode",
+      "version": "1.4.0",
+      "dependencies": []
+    },
+    {
+      "name": "csslib",
+      "version": "1.0.2",
+      "dependencies": [
+        "source_span"
+      ]
+    },
+    {
       "name": "timezone",
       "version": "0.9.4",
       "dependencies": [
@@ -1663,26 +1683,6 @@
       "dependencies": [
         "flutter",
         "path_provider_platform_interface"
-      ]
-    },
-    {
-      "name": "csslib",
-      "version": "1.0.2",
-      "dependencies": [
-        "source_span"
-      ]
-    },
-    {
-      "name": "charcode",
-      "version": "1.4.0",
-      "dependencies": []
-    },
-    {
-      "name": "html",
-      "version": "0.15.6",
-      "dependencies": [
-        "csslib",
-        "source_span"
       ]
     }
   ],
