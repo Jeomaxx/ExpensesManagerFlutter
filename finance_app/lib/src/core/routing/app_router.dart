@@ -14,9 +14,13 @@ import '../../features/accounts/presentation/pages/account_details_page.dart';
 import '../../features/budgets/presentation/pages/budget_list_page.dart';
 import '../../features/budgets/presentation/pages/add_budget_page.dart';
 import '../../features/budgets/presentation/pages/budget_details_page.dart';
+import '../../features/goals/presentation/pages/goal_list_page.dart';
+import '../../features/goals/presentation/pages/add_goal_page.dart';
+import '../../features/goals/presentation/pages/goal_details_page.dart';
 import '../models/transaction.dart';
 import '../models/account.dart';
 import '../models/budget.dart';
+import '../models/goal.dart';
 
 class AppRouter {
   static const String splash = '/';
@@ -34,6 +38,9 @@ class AppRouter {
   static const String addBudget = '/add-budget';
   static const String budgetDetails = '/budget-details';
   static const String goals = '/goals';
+  static const String addGoal = '/goals/add';
+  static const String editGoal = '/goals/edit';
+  static const String goalDetails = '/goals/details';
   static const String investments = '/investments';
   static const String loans = '/loans';
   static const String reports = '/reports';
@@ -128,6 +135,32 @@ class AppRouter {
         final budgetWithSpending = settings.arguments as BudgetWithSpending;
         return MaterialPageRoute(
           builder: (_) => BudgetDetailsPage(budgetWithSpending: budgetWithSpending),
+          settings: settings,
+        );
+      
+      case goals:
+        return MaterialPageRoute(
+          builder: (_) => const GoalListPage(),
+          settings: settings,
+        );
+      
+      case addGoal:
+        return MaterialPageRoute(
+          builder: (_) => const AddGoalPage(),
+          settings: settings,
+        );
+      
+      case editGoal:
+        final goal = settings.arguments as Goal;
+        return MaterialPageRoute(
+          builder: (_) => AddGoalPage(goalToEdit: goal),
+          settings: settings,
+        );
+      
+      case goalDetails:
+        final goalId = settings.arguments as String;
+        return MaterialPageRoute(
+          builder: (_) => GoalDetailsPage(goalId: goalId),
           settings: settings,
         );
       
