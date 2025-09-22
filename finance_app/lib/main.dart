@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:firebase_core/firebase_core.dart';
+// import 'package:firebase_core/firebase_core.dart'; // Temporarily disabled for Replit compatibility
 
 import 'src/app.dart';
 import 'src/core/services/database_service.dart';
@@ -14,16 +14,9 @@ void main() async {
   // Initialize EasyLocalization
   await EasyLocalization.ensureInitialized();
   
-  // Initialize Firebase (with error handling)
+  // Firebase temporarily disabled for Replit compatibility
   bool firebaseInitialized = false;
-  try {
-    await Firebase.initializeApp();
-    firebaseInitialized = true;
-    print('Firebase initialized successfully');
-  } catch (e) {
-    print('Firebase initialization failed: $e');
-    print('App will continue without Firebase features');
-  }
+  print('Firebase features temporarily disabled - app running in local mode');
   
   // Initialize local database
   await DatabaseService.instance.database;

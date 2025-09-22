@@ -1,5 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart'; // Temporarily disabled for Replit compatibility
 import 'package:permission_handler/permission_handler.dart';
 
 class NotificationService {
@@ -9,7 +9,7 @@ class NotificationService {
 
   final FlutterLocalNotificationsPlugin _localNotifications = 
       FlutterLocalNotificationsPlugin();
-  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+  // final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance; // Temporarily disabled for Replit compatibility
 
   Future<void> initialize({bool firebaseAvailable = false}) async {
     // Request notification permissions

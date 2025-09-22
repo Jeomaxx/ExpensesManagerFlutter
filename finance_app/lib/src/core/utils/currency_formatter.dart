@@ -3,9 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class CurrencyFormatter {
-  static String format({
-    required double amount,
-    required String currencyCode,
+  static String format(double amount, {
+    String currencyCode = 'SAR',
     String? locale,
     BuildContext? context,
   }) {
@@ -19,9 +18,8 @@ class CurrencyFormatter {
     return formatter.format(amount);
   }
 
-  static String formatCompact({
-    required double amount,
-    required String currencyCode,
+  static String formatCompact(double amount, {
+    String currencyCode = 'SAR',
     String? locale,
     BuildContext? context,
   }) {
@@ -120,5 +118,10 @@ class CurrencyFormatter {
     };
     
     return names[locale]?[currencyCode] ?? currencyCode;
+  }
+
+  // Add a static method called formatAmount that many files expect
+  static String formatAmount(double amount, {String currencyCode = 'SAR'}) {
+    return format(amount, currencyCode: currencyCode);
   }
 }

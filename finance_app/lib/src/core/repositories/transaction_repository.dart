@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:sqflite/sqflite.dart';
 
-import '../models/transaction.dart';
+import '../models/transaction.dart' as app_models;
 import '../services/database_service.dart';
 
 class TransactionRepository {
@@ -11,7 +11,7 @@ class TransactionRepository {
 
   Future<Database> get _db async => await DatabaseService.instance.database;
 
-  Future<List<Transaction>> getTransactionsByUserId({
+  Future<List<app_models.Transaction>> getTransactionsByUserId({
     required String userId,
     int? limit,
     int? offset,
@@ -63,7 +63,7 @@ class TransactionRepository {
     return maps.map((map) => _mapToTransaction(map)).toList();
   }
 
-  Future<Transaction?> getTransactionById(String id) async {
+  Future<app_models.Transaction?> getTransactionById(String id) async {
     final db = await _db;
     final maps = await db.query(
       'transactions',
@@ -77,7 +77,7 @@ class TransactionRepository {
     return null;
   }
 
-  Future<String> createTransaction(Transaction transaction) async {
+  Future<String> createTransaction(app_models.Transaction transaction) async {
     final db = await _db;
     final transactionMap = _mapFromTransaction(transaction);
     
@@ -85,7 +85,7 @@ class TransactionRepository {
     return transaction.id;
   }
 
-  Future<void> updateTransaction(Transaction transaction) async {
+  Future<void> updateTransaction(app_models.Transaction transaction) async {
     final db = await _db;
     final transactionMap = _mapFromTransaction(transaction);
     
@@ -227,8 +227,8 @@ class TransactionRepository {
     return result;
   }
 
-  Transaction _mapToTransaction(Map<String, dynamic> map) {
-    return Transaction(
+  app_models.Transaction _mapToTransaction(Map<String, dynamic> map) {
+    return app_models.Transaction(
       id: map['id'] as String,
       userId: map['user_id'] as String,
       accountId: map['account_id'] as String,
@@ -254,7 +254,7 @@ class TransactionRepository {
     );
   }
 
-  Map<String, dynamic> _mapFromTransaction(Transaction transaction) {
+  Map<String, dynamic> _mapFromTransaction(app_models.Transaction transaction) {
     return {
       'id': transaction.id,
       'user_id': transaction.userId,
