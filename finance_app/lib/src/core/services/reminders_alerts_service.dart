@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:sqflite/sqflite.dart';
 import '../models/transaction.dart';
@@ -159,6 +160,12 @@ class RemindersAlertsService {
 
   Future<void> initialize() async {
     if (_isInitialized) return;
+
+    if (kIsWeb) {
+      print('Local notifications not available on web - using web notifications instead');
+      _isInitialized = true;
+      return;
+    }
 
     const initializationSettingsAndroid = AndroidInitializationSettings('@mipmap/ic_launcher');
     const initializationSettingsIOS = DarwinInitializationSettings(

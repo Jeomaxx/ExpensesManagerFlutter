@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 
@@ -10,6 +11,9 @@ class DatabaseService {
   Database? _database;
 
   Future<Database> get database async {
+    if (kIsWeb) {
+      throw UnsupportedError('Database operations are not supported on web platform yet. Please use the mobile app for full functionality.');
+    }
     _database ??= await _initDatabase();
     return _database!;
   }

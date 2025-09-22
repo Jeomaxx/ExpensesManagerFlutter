@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:image_picker/image_picker.dart';
@@ -18,6 +19,11 @@ class ReceiptScanningService {
 
   Future<void> initialize() async {
     if (_isInitialized) return;
+    
+    if (kIsWeb) {
+      print('Receipt scanning service disabled on web platform');
+      return;
+    }
     
     try {
       _textRecognizer = TextRecognizer();
@@ -48,6 +54,10 @@ class ReceiptScanningService {
   // RECEIPT SCANNING FROM CAMERA/GALLERY
   
   Future<String?> scanReceiptFromCamera() async {
+    if (kIsWeb) {
+      return 'Receipt scanning from camera is not available on web. Please use file upload instead.';
+    }
+    
     try {
       final XFile? image = await _imagePicker.pickImage(
         source: ImageSource.camera,
@@ -296,6 +306,10 @@ class ReceiptScanningService {
   // VOICE INPUT FOR TRANSACTION DETAILS
   
   Future<String?> startVoiceInput({String locale = 'en_US'}) async {
+    if (kIsWeb) {
+      return 'Voice input is not available on web platform. Please type manually.';
+    }
+    
     if (!_speechInitialized) {
       await initialize();
     }

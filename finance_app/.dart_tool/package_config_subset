@@ -58,6 +58,10 @@ characters
 3.4
 file:///home/runner/.pub-cache/hosted/pub.dev/characters-1.4.0/
 file:///home/runner/.pub-cache/hosted/pub.dev/characters-1.4.0/lib/
+charcode
+3.0
+file:///home/runner/.pub-cache/hosted/pub.dev/charcode-1.4.0/
+file:///home/runner/.pub-cache/hosted/pub.dev/charcode-1.4.0/lib/
 checked_yaml
 3.8
 file:///home/runner/.pub-cache/hosted/pub.dev/checked_yaml-2.0.4/
@@ -86,6 +90,10 @@ crypto
 3.4
 file:///home/runner/.pub-cache/hosted/pub.dev/crypto-3.0.6/
 file:///home/runner/.pub-cache/hosted/pub.dev/crypto-3.0.6/lib/
+csslib
+3.1
+file:///home/runner/.pub-cache/hosted/pub.dev/csslib-1.0.2/
+file:///home/runner/.pub-cache/hosted/pub.dev/csslib-1.0.2/lib/
 csv
 2.12
 file:///home/runner/.pub-cache/hosted/pub.dev/csv-5.1.1/
@@ -290,6 +298,10 @@ graphs
 3.4
 file:///home/runner/.pub-cache/hosted/pub.dev/graphs-2.3.2/
 file:///home/runner/.pub-cache/hosted/pub.dev/graphs-2.3.2/lib/
+html
+3.2
+file:///home/runner/.pub-cache/hosted/pub.dev/html-0.15.6/
+file:///home/runner/.pub-cache/hosted/pub.dev/html-0.15.6/lib/
 http
 3.4
 file:///home/runner/.pub-cache/hosted/pub.dev/http-1.5.0/
@@ -634,6 +646,14 @@ typed_data
 3.5
 file:///home/runner/.pub-cache/hosted/pub.dev/typed_data-1.4.0/
 file:///home/runner/.pub-cache/hosted/pub.dev/typed_data-1.4.0/lib/
+universal_html
+2.17
+file:///home/runner/.pub-cache/hosted/pub.dev/universal_html-2.2.4/
+file:///home/runner/.pub-cache/hosted/pub.dev/universal_html-2.2.4/lib/
+universal_io
+2.17
+file:///home/runner/.pub-cache/hosted/pub.dev/universal_io-2.2.2/
+file:///home/runner/.pub-cache/hosted/pub.dev/universal_io-2.2.2/lib/
 vector_math
 2.14
 file:///home/runner/.pub-cache/hosted/pub.dev/vector_math-2.1.4/
