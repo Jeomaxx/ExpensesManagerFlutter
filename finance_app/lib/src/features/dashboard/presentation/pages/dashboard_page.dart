@@ -569,9 +569,7 @@ class DashboardPage extends ConsumerWidget {
             Navigator.of(context).pushNamed(AppRouter.accounts);
             break;
           case 3:
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Reports coming soon!')),
-            );
+            Navigator.of(context).pushNamed(AppRouter.budgets);
             break;
           case 4:
             ScaffoldMessenger.of(context).showSnackBar(

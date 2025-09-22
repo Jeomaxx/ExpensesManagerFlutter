@@ -11,8 +11,12 @@ import '../../features/transactions/presentation/pages/transaction_details_page.
 import '../../features/accounts/presentation/pages/account_list_page.dart';
 import '../../features/accounts/presentation/pages/add_account_page.dart';
 import '../../features/accounts/presentation/pages/account_details_page.dart';
+import '../../features/budgets/presentation/pages/budget_list_page.dart';
+import '../../features/budgets/presentation/pages/add_budget_page.dart';
+import '../../features/budgets/presentation/pages/budget_details_page.dart';
 import '../models/transaction.dart';
 import '../models/account.dart';
+import '../models/budget.dart';
 
 class AppRouter {
   static const String splash = '/';
@@ -27,6 +31,8 @@ class AppRouter {
   static const String addAccount = '/add-account';
   static const String accountDetails = '/account-details';
   static const String budgets = '/budgets';
+  static const String addBudget = '/add-budget';
+  static const String budgetDetails = '/budget-details';
   static const String goals = '/goals';
   static const String investments = '/investments';
   static const String loans = '/loans';
@@ -102,6 +108,26 @@ class AppRouter {
         final account = settings.arguments as Account;
         return MaterialPageRoute(
           builder: (_) => AccountDetailsPage(account: account),
+          settings: settings,
+        );
+      
+      case budgets:
+        return MaterialPageRoute(
+          builder: (_) => const BudgetListPage(),
+          settings: settings,
+        );
+      
+      case addBudget:
+        final budget = settings.arguments as Budget?;
+        return MaterialPageRoute(
+          builder: (_) => AddBudgetPage(editingBudget: budget),
+          settings: settings,
+        );
+      
+      case budgetDetails:
+        final budgetWithSpending = settings.arguments as BudgetWithSpending;
+        return MaterialPageRoute(
+          builder: (_) => BudgetDetailsPage(budgetWithSpending: budgetWithSpending),
           settings: settings,
         );
       

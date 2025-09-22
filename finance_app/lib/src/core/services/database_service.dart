@@ -19,7 +19,7 @@ class DatabaseService {
     
     return await openDatabase(
       path,
-      version: 1,
+      version: 2,
       onCreate: _onCreate,
       onUpgrade: _onUpgrade,
     );
@@ -161,6 +161,26 @@ class DatabaseService {
       )
     ''');
 
+    // Budgets table
+    await db.execute('''
+      CREATE TABLE budgets (
+        id TEXT PRIMARY KEY,
+        user_id TEXT NOT NULL,
+        category_id TEXT NOT NULL,
+        name TEXT NOT NULL,
+        amount REAL NOT NULL,
+        type INTEGER NOT NULL,
+        start_date TEXT NOT NULL,
+        end_date TEXT NOT NULL,
+        is_active INTEGER NOT NULL DEFAULT 1,
+        description TEXT,
+        created_at TEXT NOT NULL,
+        last_modified TEXT NOT NULL,
+        FOREIGN KEY (user_id) REFERENCES users (id),
+        FOREIGN KEY (category_id) REFERENCES categories (id)
+      )
+    ''');
+
     // Create indexes for better performance
     await db.execute('CREATE INDEX idx_transactions_user_date ON transactions(user_id, date)');
     await db.execute('CREATE INDEX idx_transactions_account ON transactions(account_id)');
@@ -170,10 +190,40 @@ class DatabaseService {
     await db.execute('CREATE INDEX idx_goals_user ON goals(user_id)');
     await db.execute('CREATE INDEX idx_investments_user ON investments(user_id)');
     await db.execute('CREATE INDEX idx_loans_user ON loans(user_id)');
+    await db.execute('CREATE INDEX idx_budgets_user ON budgets(user_id)');
+    await db.execute('CREATE INDEX idx_budgets_category ON budgets(category_id)');
+    await db.execute('CREATE INDEX idx_budgets_date_range ON budgets(start_date, end_date)');
+    await db.execute('CREATE INDEX idx_transactions_budget_query ON transactions(user_id, category_id, type, date)');
   }
 
   Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
-    // Handle database upgrades here
+    if (oldVersion < 2) {
+      // Add budgets table
+      await db.execute('''
+        CREATE TABLE budgets (
+          id TEXT PRIMARY KEY,
+          user_id TEXT NOT NULL,
+          category_id TEXT NOT NULL,
+          name TEXT NOT NULL,
+          amount REAL NOT NULL,
+          type INTEGER NOT NULL,
+          start_date TEXT NOT NULL,
+          end_date TEXT NOT NULL,
+          is_active INTEGER NOT NULL DEFAULT 1,
+          description TEXT,
+          created_at TEXT NOT NULL,
+          last_modified TEXT NOT NULL,
+          FOREIGN KEY (user_id) REFERENCES users (id),
+          FOREIGN KEY (category_id) REFERENCES categories (id)
+        )
+      ''');
+      
+      // Add budget indexes
+      await db.execute('CREATE INDEX idx_budgets_user ON budgets(user_id)');
+      await db.execute('CREATE INDEX idx_budgets_category ON budgets(category_id)');
+      await db.execute('CREATE INDEX idx_budgets_date_range ON budgets(start_date, end_date)');
+      await db.execute('CREATE INDEX idx_transactions_budget_query ON transactions(user_id, category_id, type, date)');
+    }
   }
 
   Future<void> close() async {
