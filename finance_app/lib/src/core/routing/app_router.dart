@@ -5,6 +5,10 @@ import '../../features/auth/presentation/pages/onboarding_page.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/auth/presentation/pages/register_page.dart';
 import '../../features/dashboard/presentation/pages/dashboard_page.dart';
+import '../../features/transactions/presentation/pages/add_transaction_page.dart';
+import '../../features/transactions/presentation/pages/transaction_list_page.dart';
+import '../../features/transactions/presentation/pages/transaction_details_page.dart';
+import '../models/transaction.dart';
 
 class AppRouter {
   static const String splash = '/';
@@ -52,6 +56,26 @@ class AppRouter {
       case dashboard:
         return MaterialPageRoute(
           builder: (_) => const DashboardPage(),
+          settings: settings,
+        );
+      
+      case addTransaction:
+        final transaction = settings.arguments as Transaction?;
+        return MaterialPageRoute(
+          builder: (_) => AddTransactionPage(editingTransaction: transaction),
+          settings: settings,
+        );
+      
+      case transactionsList:
+        return MaterialPageRoute(
+          builder: (_) => const TransactionListPage(),
+          settings: settings,
+        );
+      
+      case transactionDetails:
+        final transaction = settings.arguments as Transaction;
+        return MaterialPageRoute(
+          builder: (_) => TransactionDetailsPage(transaction: transaction),
           settings: settings,
         );
       

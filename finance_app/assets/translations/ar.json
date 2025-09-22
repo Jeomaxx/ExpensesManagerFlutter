@@ -37,6 +37,9 @@
   "monthly_expenses": "المصروفات الشهرية",
   "add_income": "إضافة دخل",
   "add_expense": "إضافة مصروف",
+  "add_transaction": "إضافة معاملة",
+  "edit_transaction": "تعديل المعاملة",
+  "transaction_details": "تفاصيل المعاملة",
   "recent_transactions": "المعاملات الأخيرة",
   "view_all": "عرض الكل",
   

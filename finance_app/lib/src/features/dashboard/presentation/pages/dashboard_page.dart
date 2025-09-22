@@ -41,10 +41,7 @@ class DashboardPage extends ConsumerWidget {
           IconButton(
             icon: const Icon(Icons.settings_outlined),
             onPressed: () {
-              // TODO: Navigate to settings when implemented
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text('Settings coming soon!')),
-              );
+              Navigator.of(context).pushNamed(AppRouter.settings);
             },
           ),
         ],
@@ -81,10 +78,7 @@ class DashboardPage extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // TODO: Navigate to add transaction when implemented
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('Add transaction coming soon!')),
-          );
+          Navigator.of(context).pushNamed(AppRouter.addTransaction);
         },
         icon: const Icon(Icons.add),
         label: Text('add_transaction'.tr()),
@@ -337,9 +331,7 @@ class DashboardPage extends ConsumerWidget {
             ),
             TextButton(
               onPressed: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Transactions list coming soon!')),
-                );
+                Navigator.of(context).pushNamed(AppRouter.transactionsList);
               },
               child: Text('view_all'.tr()),
             ),
@@ -571,9 +563,7 @@ class DashboardPage extends ConsumerWidget {
             // Already on dashboard
             break;
           case 1:
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(content: Text('Transactions coming soon!')),
-            );
+            Navigator.of(context).pushNamed(AppRouter.transactionsList);
             break;
           case 2:
             ScaffoldMessenger.of(context).showSnackBar(

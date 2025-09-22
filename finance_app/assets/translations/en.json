@@ -37,6 +37,9 @@
   "monthly_expenses": "Monthly Expenses",
   "add_income": "Add Income",
   "add_expense": "Add Expense",
+  "add_transaction": "Add Transaction",
+  "edit_transaction": "Edit Transaction",
+  "transaction_details": "Transaction Details",
   "recent_transactions": "Recent Transactions",
   "view_all": "View All",
   

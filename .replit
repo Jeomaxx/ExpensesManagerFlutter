@@ -3,3 +3,27 @@ modules = ["flutter"]
 [nix]
 channel = "stable-25_05"
 packages = ["git"]
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Finance App"
+
+[[workflows.workflow]]
+name = "Finance App"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd finance_app && flutter run"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
