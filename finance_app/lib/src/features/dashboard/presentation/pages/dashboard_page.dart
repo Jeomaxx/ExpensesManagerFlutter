@@ -1,0 +1,473 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:easy_localization/easy_localization.dart';
+
+import '../../../../shared/theme/app_theme.dart';
+import '../../../../core/providers/auth_provider.dart';
+import '../../../../core/routing/app_router.dart';
+
+class DashboardPage extends ConsumerWidget {
+  const DashboardPage({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final authState = ref.watch(authProvider);
+    final user = authState.user;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('dashboard'.tr()),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.notifications_outlined),
+            onPressed: () {
+              // TODO: Navigate to notifications
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings_outlined),
+            onPressed: () {
+              // TODO: Navigate to settings when implemented
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text('Settings coming soon!')),
+              );
+            },
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            // Welcome Section
+            _buildWelcomeSection(context, user?.name ?? 'Guest'),
+            
+            const SizedBox(height: 24),
+            
+            // Balance Overview Card
+            _buildBalanceCard(context),
+            
+            const SizedBox(height: 24),
+            
+            // Quick Actions
+            _buildQuickActions(context),
+            
+            const SizedBox(height: 24),
+            
+            // Recent Transactions Section
+            _buildRecentTransactions(context),
+            
+            const SizedBox(height: 24),
+            
+            // Monthly Summary
+            _buildMonthlySummary(context),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          // TODO: Navigate to add transaction when implemented
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Add transaction coming soon!')),
+          );
+        },
+        icon: const Icon(Icons.add),
+        label: Text('add_transaction'.tr()),
+      ),
+      bottomNavigationBar: _buildBottomNavigationBar(context),
+    );
+  }
+
+  Widget _buildWelcomeSection(BuildContext context, String userName) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: AppTheme.primaryGradient,
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '${'welcome'.tr()}, $userName!',
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'manage_your_finances_today'.tr(),
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+              color: Colors.white.withOpacity(0.9),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBalanceCard(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Text(
+              'total_balance'.tr(),
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: AppTheme.textSecondaryColor,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              '15,750.00 ${'currency_sar'.tr()}', // TODO: Get actual balance
+              style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                fontWeight: FontWeight.bold,
+                color: AppTheme.primaryColor,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Expanded(
+                  child: _buildBalanceItem(
+                    context,
+                    'monthly_income'.tr(),
+                    '+8,500.00',
+                    AppTheme.incomeColor,
+                    Icons.trending_up,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: _buildBalanceItem(
+                    context,
+                    'monthly_expenses'.tr(),
+                    '-6,250.00',
+                    AppTheme.expenseColor,
+                    Icons.trending_down,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBalanceItem(
+    BuildContext context,
+    String label,
+    String amount,
+    Color color,
+    IconData icon,
+  ) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(8),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, color: color, size: 24),
+          const SizedBox(height: 4),
+          Text(
+            label,
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+              color: AppTheme.textSecondaryColor,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 2),
+          Text(
+            amount,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+              color: color,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildQuickActions(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'quick_actions'.tr(),
+          style: Theme.of(context).textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 16),
+        Row(
+          children: [
+            Expanded(
+              child: _buildActionButton(
+                context,
+                'add_income'.tr(),
+                Icons.add_circle_outline,
+                AppTheme.incomeColor,
+                () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Add income coming soon!')),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: _buildActionButton(
+                context,
+                'add_expense'.tr(),
+                Icons.remove_circle_outline,
+                AppTheme.expenseColor,
+                () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Add expense coming soon!')),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: _buildActionButton(
+                context,
+                'scan_receipt'.tr(),
+                Icons.camera_alt_outlined,
+                AppTheme.accentColor,
+                () {
+                  // TODO: Navigate to receipt scanner
+                },
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _buildActionButton(
+    BuildContext context,
+    String label,
+    IconData icon,
+    Color color,
+    VoidCallback onPressed,
+  ) {
+    return OutlinedButton(
+      onPressed: onPressed,
+      style: OutlinedButton.styleFrom(
+        foregroundColor: color,
+        side: BorderSide(color: color),
+        padding: const EdgeInsets.symmetric(vertical: 12),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, size: 24),
+          const SizedBox(height: 4),
+          Text(
+            label,
+            style: Theme.of(context).textTheme.bodySmall,
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRecentTransactions(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'recent_transactions'.tr(),
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('Transactions list coming soon!')),
+                );
+              },
+              child: Text('view_all'.tr()),
+            ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        // TODO: Replace with actual transaction list
+        _buildTransactionItem(context, 'Grocery Shopping', '-120.50', 'food', DateTime.now()),
+        _buildTransactionItem(context, 'Salary', '+5,000.00', 'income', DateTime.now().subtract(const Duration(days: 1))),
+        _buildTransactionItem(context, 'Gas Station', '-80.00', 'transportation', DateTime.now().subtract(const Duration(days: 2))),
+      ],
+    );
+  }
+
+  Widget _buildTransactionItem(
+    BuildContext context,
+    String title,
+    String amount,
+    String category,
+    DateTime date,
+  ) {
+    final isExpense = amount.startsWith('-');
+    final color = isExpense ? AppTheme.expenseColor : AppTheme.incomeColor;
+    
+    return Card(
+      margin: const EdgeInsets.only(bottom: 8),
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundColor: color.withOpacity(0.1),
+          child: Icon(
+            _getCategoryIcon(category),
+            color: color,
+          ),
+        ),
+        title: Text(title),
+        subtitle: Text(
+          DateFormat('MMM d, yyyy').format(date),
+          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+            color: AppTheme.textSecondaryColor,
+          ),
+        ),
+        trailing: Text(
+          amount,
+          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+            color: color,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        onTap: () {
+          // TODO: Navigate to transaction details
+        },
+      ),
+    );
+  }
+
+  IconData _getCategoryIcon(String category) {
+    switch (category) {
+      case 'food':
+        return Icons.restaurant;
+      case 'transportation':
+        return Icons.directions_car;
+      case 'income':
+        return Icons.attach_money;
+      default:
+        return Icons.category;
+    }
+  }
+
+  Widget _buildMonthlySummary(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'monthly_summary'.tr(),
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              'january_2024'.tr(), // TODO: Get current month
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                color: AppTheme.textSecondaryColor,
+              ),
+            ),
+            const SizedBox(height: 16),
+            // TODO: Add chart widget here
+            Container(
+              height: 120,
+              decoration: BoxDecoration(
+                color: AppTheme.backgroundColor,
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Center(
+                child: Text(
+                  'chart_placeholder'.tr(),
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: AppTheme.textSecondaryColor,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBottomNavigationBar(BuildContext context) {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      currentIndex: 0,
+      items: [
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.home_outlined),
+          activeIcon: const Icon(Icons.home),
+          label: 'dashboard'.tr(),
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.receipt_long_outlined),
+          activeIcon: const Icon(Icons.receipt_long),
+          label: 'transactions'.tr(),
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.account_balance_wallet_outlined),
+          activeIcon: const Icon(Icons.account_balance_wallet),
+          label: 'accounts'.tr(),
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.bar_chart_outlined),
+          activeIcon: const Icon(Icons.bar_chart),
+          label: 'reports'.tr(),
+        ),
+        BottomNavigationBarItem(
+          icon: const Icon(Icons.more_horiz_outlined),
+          activeIcon: const Icon(Icons.more_horiz),
+          label: 'more'.tr(),
+        ),
+      ],
+      onTap: (index) {
+        switch (index) {
+          case 0:
+            // Already on dashboard
+            break;
+          case 1:
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Transactions coming soon!')),
+            );
+            break;
+          case 2:
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Accounts coming soon!')),
+            );
+            break;
+          case 3:
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Reports coming soon!')),
+            );
+            break;
+          case 4:
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Settings coming soon!')),
+            );
+            break;
+        }
+      },
+    );
+  }
+}

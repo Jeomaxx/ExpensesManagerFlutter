@@ -3,6 +3,8 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import '../models/user.dart';
 import '../repositories/user_repository.dart';
+import '../repositories/category_repository.dart';
+import '../services/default_data_service.dart';
 
 // Auth State
 class AuthState {
@@ -76,11 +78,28 @@ class AuthNotifier extends StateNotifier<AuthState> {
     state = state.copyWith(isLoading: true, error: null);
     
     try {
-      // TODO: Implement actual authentication with Firebase Auth or local auth
+      // IMPORTANT: This is a placeholder implementation for demonstration
+      // In production, you MUST implement proper password verification
+      // with Firebase Auth or another secure authentication provider
+      
+      // TODO: Replace with real authentication:
+      // 1. Verify password against stored hash
+      // 2. Use Firebase Auth or similar secure provider
+      // 3. Implement proper session management
+      
       final user = await _userRepository.getUserByEmail(email);
       
       if (user != null) {
         await _secureStorage.write(key: 'user_id', value: user.id);
+        
+        // Ensure user has default data (idempotent)
+        try {
+          await _ensureDefaultData(user.id);
+        } catch (e) {
+          print('Failed to ensure default data: $e');
+          // Don't fail the signin process if default data creation fails
+        }
+        
         state = state.copyWith(
           user: user,
           isAuthenticated: true,
@@ -142,6 +161,14 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await _userRepository.createUser(user);
       await _secureStorage.write(key: 'user_id', value: user.id);
       
+      // Create default data for new user
+      try {
+        await _ensureDefaultData(user.id);
+      } catch (e) {
+        print('Failed to create default data: $e');
+        // Don't fail the signup process if default data creation fails
+      }
+      
       state = state.copyWith(
         user: user,
         isAuthenticated: true,
@@ -169,6 +196,17 @@ class AuthNotifier extends StateNotifier<AuthState> {
     } catch (e) {
       state = state.copyWith(error: e.toString());
     }
+  }
+
+  Future<void> _ensureDefaultData(String userId) async {
+    // Check if user already has categories to avoid duplicates
+    final existingCategories = await CategoryRepository.instance.getCategoriesByUserId(userId);
+    
+    if (existingCategories.isEmpty) {
+      await DefaultDataService.instance.createDefaultCategories(userId);
+    }
+    
+    // TODO: Also ensure default account exists
   }
 }
 

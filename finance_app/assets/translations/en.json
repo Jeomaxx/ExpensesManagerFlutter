@@ -158,5 +158,12 @@
   "name_too_short": "Name is too short",
   "invalid_phone": "Invalid phone number",
   "by_signing_up_you_agree": "By signing up, you agree to our Terms of Service and Privacy Policy",
-  "already_have_account": "Already have an account?"
+  "already_have_account": "Already have an account?",
+  
+  "manage_your_finances_today": "Manage your finances today",
+  "quick_actions": "Quick Actions",
+  "add_transaction": "Add Transaction",
+  "january_2024": "January 2024",
+  "chart_placeholder": "Chart (Coming Soon)",
+  "more": "More"
 }

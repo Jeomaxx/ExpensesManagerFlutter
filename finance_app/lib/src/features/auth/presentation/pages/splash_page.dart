@@ -4,6 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../shared/theme/app_theme.dart';
 import '../../../../core/routing/app_router.dart';
+import '../../../../core/providers/auth_provider.dart';
 
 class SplashPage extends ConsumerStatefulWidget {
   const SplashPage({super.key});
@@ -17,12 +18,13 @@ class _SplashPageState extends ConsumerState<SplashPage>
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
   late Animation<double> _scaleAnimation;
+  bool _hasNavigated = false;
 
   @override
   void initState() {
     super.initState();
     _initializeAnimations();
-    _navigateToNextScreen();
+    _setupAuthListener();
   }
 
   void _initializeAnimations() {
@@ -50,13 +52,43 @@ class _SplashPageState extends ConsumerState<SplashPage>
     _animationController.forward();
   }
 
-  void _navigateToNextScreen() {
-    Future.delayed(const Duration(milliseconds: 3000), () {
+  void _setupAuthListener() {
+    // Listen to auth state changes immediately - no artificial delay
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) {
-        // TODO: Check if user is logged in and navigate accordingly
-        Navigator.of(context).pushReplacementNamed(AppRouter.onboarding);
+        ref.listen<AuthState>(authProvider, (previous, next) {
+          if (!next.isLoading && mounted) {
+            // Ensure minimum splash display time for UX
+            Future.delayed(const Duration(milliseconds: 1500), () {
+              if (mounted) {
+                _navigateBasedOnAuthState(next);
+              }
+            });
+          }
+        });
+
+        // Check current state immediately in case auth is already resolved
+        final currentState = ref.read(authProvider);
+        if (!currentState.isLoading) {
+          Future.delayed(const Duration(milliseconds: 1500), () {
+            if (mounted) {
+              _navigateBasedOnAuthState(currentState);
+            }
+          });
+        }
       }
     });
+  }
+
+  void _navigateBasedOnAuthState(AuthState authState) {
+    if (_hasNavigated) return; // Prevent double navigation
+    _hasNavigated = true;
+    
+    if (authState.isAuthenticated) {
+      Navigator.of(context).pushReplacementNamed(AppRouter.dashboard);
+    } else {
+      Navigator.of(context).pushReplacementNamed(AppRouter.onboarding);
+    }
   }
 
   @override

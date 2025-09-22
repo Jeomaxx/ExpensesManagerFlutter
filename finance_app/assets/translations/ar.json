@@ -158,5 +158,12 @@
   "name_too_short": "الاسم قصير جداً",
   "invalid_phone": "رقم الهاتف غير صحيح",
   "by_signing_up_you_agree": "بإنشاء حساب، فإنك توافق على شروط الخدمة وسياسة الخصوصية",
-  "already_have_account": "لديك حساب بالفعل؟"
+  "already_have_account": "لديك حساب بالفعل؟",
+  
+  "manage_your_finances_today": "إدارة أموالك اليوم",
+  "quick_actions": "إجراءات سريعة",
+  "add_transaction": "إضافة معاملة",
+  "january_2024": "يناير 2024",
+  "chart_placeholder": "مخطط بياني (قريباً)",
+  "more": "المزيد"
 }

@@ -4,6 +4,7 @@ import '../../features/auth/presentation/pages/splash_page.dart';
 import '../../features/auth/presentation/pages/onboarding_page.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/auth/presentation/pages/register_page.dart';
+import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 
 class AppRouter {
   static const String splash = '/';
@@ -45,6 +46,12 @@ class AppRouter {
       case register:
         return MaterialPageRoute(
           builder: (_) => const RegisterPage(),
+          settings: settings,
+        );
+      
+      case dashboard:
+        return MaterialPageRoute(
+          builder: (_) => const DashboardPage(),
           settings: settings,
         );
       
