@@ -1,8 +1,8 @@
-modules = ["flutter"]
+modules = ["flutter", "dart-3.8"]
 
 [nix]
 channel = "stable-25_05"
-packages = ["git"]
+packages = ["git", "flutter"]
 
 [workflows]
 runButton = "Project"
@@ -27,3 +27,6 @@ waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[agent]
+expertMode = true
