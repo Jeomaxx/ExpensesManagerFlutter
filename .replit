@@ -39,6 +39,10 @@ externalPort = 80
 localPort = 33245
 externalPort = 3000
 
+[[ports]]
+localPort = 35627
+externalPort = 3001
+
 [deployment]
 deploymentTarget = "autoscale"
 run = ["flutter", "run", "-d", "web-server", "--web-port", "5000", "--web-hostname", "0.0.0.0", "--target=lib/main_simple.dart", "--release"]
