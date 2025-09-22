@@ -1,0 +1,5 @@
+modules = ["flutter"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["git"]

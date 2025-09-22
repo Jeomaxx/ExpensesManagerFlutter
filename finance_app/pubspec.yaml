@@ -1,0 +1,89 @@
+name: finance_app
+description: A personal finance management Flutter application with Arabic RTL support and AI integration.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # Core dependencies
+  cupertino_icons: ^1.0.2
+  
+  # State management
+  flutter_riverpod: ^2.4.9
+  
+  # Database
+  sqflite: ^2.3.0
+  path: ^1.8.3
+  
+  # Firebase
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  cloud_firestore: ^4.13.6
+  firebase_messaging: ^14.7.10
+  
+  # UI & Charts
+  fl_chart: ^0.65.0
+  flutter_staggered_grid_view: ^0.7.0
+  
+  # Secure storage
+  flutter_secure_storage: ^9.0.0
+  
+  # Networking
+  http: ^1.1.0
+  dio: ^5.4.0
+  
+  # Utilities
+  intl: ^0.19.0
+  shared_preferences: ^2.2.2
+  image_picker: ^1.0.4
+  file_picker: ^6.1.1
+  permission_handler: ^11.1.0
+  
+  # Notifications
+  flutter_local_notifications: ^16.3.0
+  
+  # AI & ML
+  google_generative_ai: ^0.2.2
+  google_ml_kit: ^0.16.0
+  speech_to_text: ^6.6.0
+  
+  # PDF & CSV
+  pdf: ^3.10.7
+  csv: ^5.0.2
+  
+  # Localization
+  easy_localization: ^3.0.3
+  
+  # Biometric
+  local_auth: ^2.1.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  mockito: ^5.4.4
+  build_runner: ^2.4.7
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/
+    - assets/translations/
+  
+  fonts:
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
+        - asset: assets/fonts/Tajawal-Bold.ttf
+          weight: 700
