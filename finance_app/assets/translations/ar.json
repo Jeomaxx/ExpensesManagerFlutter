@@ -128,5 +128,35 @@
   
   "skip": "تخطي",
   "continue": "متابعة",
-  "sign_in_to_continue": "سجل دخولك للمتابعة"
+  "sign_in_to_continue": "سجل دخولك للمتابعة",
+  
+  "today": "اليوم",
+  "yesterday": "أمس",
+  "days_ago": "أيام مضت",
+  "week_ago": "أسبوع مضى",
+  "weeks_ago": "أسابيع مضت",
+  "month_ago": "شهر مضى",
+  "months_ago": "أشهر مضت",
+  "year_ago": "سنة مضت",
+  "years_ago": "سنوات مضت",
+  
+  "currency_sar": "الريال السعودي",
+  "currency_usd": "الدولار الأمريكي",
+  "currency_eur": "اليورو",
+  "currency_egp": "الجنيه المصري",
+  "currency_aed": "الدرهم الإماراتي",
+  
+  "select_language": "اختر اللغة",
+  "arabic": "العربية",
+  "english": "الإنجليزية",
+  
+  "app_direction": "rtl",
+  
+  "create_account": "إنشاء حساب",
+  "join_us_today": "انضم إلينا اليوم",
+  "optional": "اختياري",
+  "name_too_short": "الاسم قصير جداً",
+  "invalid_phone": "رقم الهاتف غير صحيح",
+  "by_signing_up_you_agree": "بإنشاء حساب، فإنك توافق على شروط الخدمة وسياسة الخصوصية",
+  "already_have_account": "لديك حساب بالفعل؟"
 }

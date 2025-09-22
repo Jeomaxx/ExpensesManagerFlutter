@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../features/auth/presentation/pages/splash_page.dart';
 import '../../features/auth/presentation/pages/onboarding_page.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
+import '../../features/auth/presentation/pages/register_page.dart';
 
 class AppRouter {
   static const String splash = '/';
@@ -38,6 +39,12 @@ class AppRouter {
       case login:
         return MaterialPageRoute(
           builder: (_) => const LoginPage(),
+          settings: settings,
+        );
+      
+      case register:
+        return MaterialPageRoute(
+          builder: (_) => const RegisterPage(),
           settings: settings,
         );
       

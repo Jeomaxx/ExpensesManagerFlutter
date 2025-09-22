@@ -128,5 +128,35 @@
   
   "skip": "Skip",
   "continue": "Continue",
-  "sign_in_to_continue": "Sign in to continue"
+  "sign_in_to_continue": "Sign in to continue",
+  
+  "today": "Today",
+  "yesterday": "Yesterday",
+  "days_ago": "days ago",
+  "week_ago": "a week ago",
+  "weeks_ago": "weeks ago",
+  "month_ago": "a month ago",
+  "months_ago": "months ago",
+  "year_ago": "a year ago",
+  "years_ago": "years ago",
+  
+  "currency_sar": "Saudi Riyal",
+  "currency_usd": "US Dollar",
+  "currency_eur": "Euro",
+  "currency_egp": "Egyptian Pound",
+  "currency_aed": "UAE Dirham",
+  
+  "select_language": "Select Language",
+  "arabic": "Arabic",
+  "english": "English",
+  
+  "app_direction": "ltr",
+  
+  "create_account": "Create Account",
+  "join_us_today": "Join us today",
+  "optional": "Optional",
+  "name_too_short": "Name is too short",
+  "invalid_phone": "Invalid phone number",
+  "by_signing_up_you_agree": "By signing up, you agree to our Terms of Service and Privacy Policy",
+  "already_have_account": "Already have an account?"
 }

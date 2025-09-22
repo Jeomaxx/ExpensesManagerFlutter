@@ -11,6 +11,9 @@ class FinanceApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // Determine text direction based on locale
+    final isRTL = context.locale.languageCode == 'ar';
+    
     return MaterialApp(
       title: 'Finance App',
       localizationsDelegates: context.localizationDelegates,
@@ -22,6 +25,13 @@ class FinanceApp extends ConsumerWidget {
       home: const SplashPage(),
       onGenerateRoute: AppRouter.generateRoute,
       debugShowCheckedModeBanner: false,
+      // Force text direction based on locale
+      builder: (context, child) {
+        return Directionality(
+          textDirection: isRTL ? TextDirection.rtl : TextDirection.ltr,
+          child: child!,
+        );
+      },
     );
   }
 }
