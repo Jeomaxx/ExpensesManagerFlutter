@@ -1,0 +1,165 @@
+Build a cross-platform Flutter mobile application (Android & iOS) that helps a user manage personal finances: track incomes/expenses, analyze spending, create savings goals, record investments, manage loans (with repayment schedule & reminders), and include an AI assistant powered by Google Gemini for smart categorization and insights.
+
+Target audience:
+Arabic-first users (full RTL), optional English. App must run on a real mobile phone.
+
+High-level requirements:
+1. Platforms & Tech
+   - Flutter (current stable release) with Dart.
+   - Local DB: SQLite (sqflite) for offline-first operation.
+   - Cloud sync (optional/configurable): Firebase (Firestore) + Firebase Auth.
+   - Notifications: Firebase Cloud Messaging + flutter_local_notifications (for scheduled loan reminders).
+   - Secure storage: flutter_secure_storage for API keys and tokens.
+   - AI: Google Gemini integration for:
+     - auto-categorization of transactions (text/receipt/voice),
+     - summarized insights (monthly, category alerts),
+     - in-app chat assistant for user queries (e.g., "How much did I spend on food in July?").
+   - OCR: Google ML Kit (or equivalent) for scanning receipts.
+   - Voice input: speech_to_text for quick entry.
+   - Charts: fl_chart or equivalent.
+   - State management: Riverpod / Provider / Bloc (choose one).
+   - Localization: support Arabic (RTL) and English (LTR).
+
+2. Core Features (must-have)
+   - Add income / add expense (amount, date, category, account, notes, attach receipt image).
+   - Multiple accounts/wallets (cash, bank card, mobile wallet).
+   - Multiple currencies + exchange rate support.
+   - Transaction editing, deletion, and recurring transactions.
+   - Budgeting: create monthly budgets per category and track usage.
+   - Savings goals: create target amount, due date, track progress, mark saved contributions.
+   - Investments: add investment record (type, amount, date, notes); view history.
+   - Loans: add loan (lender, principal, interest, repayment schedule), set monthly payments, automatic schedule generation, and in-app + push reminders (configurable lead time: e.g., 3 days before).
+   - Reports & analytics: monthly/yearly summaries, trend lines, category pie charts, exportable.
+   - Export/Import CSV & PDF report.
+   - User Authentication: email/phone + optional biometric login.
+   - Offline-first: use local DB and queue sync; resolve conflicts (last-write-wins or timestamp).
+   - Settings: currency, notification preferences, backup & restore, Gemini on/off.
+
+3. UX/UI Screens (each screen description: fields, actions, validations)
+   - Splash Screen
+     - Short brand animation, then auto-navigation to Onboarding or Home if logged in.
+
+   - Onboarding (3 screens)
+     - Features highlights: track expenses, goals, smart AI insights.
+     - Option to sign up or try demo (sample data).
+
+   - Authentication
+     - Login (email/phone + password) and Register (name, email/phone, password).
+     - OTP for phone.
+     - “Skip / Continue as Guest” option (data local-only).
+     - Biometric prompt after first login (optional).
+
+   - Home / Dashboard
+     - Top: Total balance (sum of selected accounts).
+     - Quick add floating button (+): Add Income / Add Expense options.
+     - Main content:
+       - Monthly summary (income vs expense) chart (line).
+       - Category breakdown (pie) for the current month.
+       - Progress of active savings goals (progress bars).
+       - Upcoming loan payments list (with days remaining).
+       - Recent transactions list (top 5-10) with swipe actions (edit/delete).
+     - Filters: date range, account, category, search.
+
+   - Add/Edit Transaction
+     - Fields: Type (Income/Expense), Amount (numeric), Date/Time (picker), Category (select or create), Account, Tag (optional), Notes (optional), Attach Receipt (camera/gallery), Recurring (none/daily/weekly/monthly/custom), Split transaction (optional: split among categories).
+     - Validation: amount > 0, date not in future (optional).
+     - Smart: Paste/voice/OCR -> suggest category via Gemini.
+     - Save button.
+
+   - Transactions List (All)
+     - Grouped by date, supports filtering and search.
+     - Each item: amount (color coded), category icon, account, short note.
+     - Tap -> Transaction Details.
+
+   - Transaction Details
+     - Full info, attached receipt image (tap to view), edit, duplicate, delete, share/export.
+
+   - Categories & Budgets
+     - List of categories, ability to add/edit categories (icon, color).
+     - For each category: set monthly budget, view spent/remaining, notification threshold.
+
+   - Goals (Savings)
+     - Add goal: title, target amount, target date, linked account, recurring contribution schedule (optional).
+     - For each goal: progress timeline, contributions list, mark as completed/manual marking when user "saved" an amount.
+     - Allow partial contributions (user records that they contributed X to the goal).
+
+   - Investments
+     - Add investment: name, type (stock, crypto, real estate, other), amount, date, notes, current value (optional), ROI (computed manually or fetched optionally).
+     - Investments list with total invested and P/L.
+
+   - Loans
+     - Add loan: lender, principal, interest rate (optional), start date, term (months), monthly payment (auto-calc), custom schedule, first payment date.
+     - Show amortization schedule with each payment, outstanding principal, next due date.
+     - Buttons: record payment, edit loan, mark overdue.
+     - Notifications: local & push reminders before due date.
+
+   - Reports & Insights (AI-assisted)
+     - Pre-built reports: monthly summary, category spending, cashflow forecast, biggest spending categories.
+     - Ask Gemini: short chat box where user can ask natural-language questions (e.g., "How much did I spend on transport last 3 months?").
+     - Suggest budgets and saving tips (Gemini).
+
+   - Receipt Scanner / Voice Entry
+     - Receipt scanner: camera view, capture, OCR extract amount & vendor & date -> propose transaction.
+     - Voice entry: record quick transaction -> transcribe -> propose parsed transaction.
+
+   - Settings
+     - Profile, currency, language, GDPR/Privacy, API keys config (Gemini toggle and API key input), backup & restore, export data, theme (light/dark).
+
+   - Help / Feedback
+     - Contact support, send logs (user opt-in).
+
+4. Data model (high level)
+   - User { id, name, email, settings }
+   - Account { id, userId, name, type, currency, balance }
+   - Transaction { id, userId, accountId, amount, type, categoryId, date, notes, receiptUrl, recurringId, tags }
+   - Category { id, name, parentId, budgetAmount }
+   - Goal { id, title, targetAmount, currentAmount, targetDate, contributions[] }
+   - Investment { id, name, type, amount, date, currentValue }
+   - Loan { id, lender, principal, interestRate, termMonths, schedule[], payments[] }
+   - Sync metadata: lastModified, createdAt, deletedAt flag
+
+5. Google Gemini integration (requirements)
+   - Implement as optional feature behind a toggle in Settings (user must paste API key or connect).
+   - Use Gemini to:
+     - Parse free-text / voice / OCR results into structured transactions (amount, date, vendor, category).
+     - Provide monthly insights and natural-language answers to finance questions.
+     - Ensure all requests are secure; never log API keys in plaintext to remote repos.
+   - Implement fallback: if Gemini disabled/unavailable, app uses local rules (keyword matching) for categorization.
+
+6. Testing (required test cases & automation)
+   - Unit tests for core logic: transaction CRUD, loan schedule calc, goal progress calc.
+   - Widget tests for key screens: Add Transaction, Home Dashboard, Loan screen.
+   - Integration (end-to-end) tests for flows: signup/login, add transaction offline then sync, add loan schedule & trigger notification.
+   - Provide the following Test Cases (examples):
+     - TC-01: Create income transaction — verify account balance updated and shows on dashboard.
+     - TC-02: Create expense with receipt (OCR) — OCR extracts amount & suggests category, verify user can accept and save.
+     - TC-03: Create recurring expense monthly — verify next month's entry auto-created or scheduled.
+     - TC-04: Create savings goal & add partial contribution — verify progress updates and dashboard shows %.
+     - TC-05: Add loan and record payment — verify amortization updated and next due date changes.
+     - TC-06: Turn on Gemini, input free-text "I paid 250 EGP for groceries yesterday" via voice/chat — verify parsed transaction created correctly.
+     - TC-07: Offline add transactions, then go online — verify sync to cloud and no data loss.
+     - TC-08: Export CSV for selected month — open CSV, validate rows correspond to displayed transactions.
+     - TC-09: Biometric login after initial setup — verify login succeeds and session persists.
+     - TC-10: Notification triggers 3 days before loan due date — verify push/local notification received.
+   - Provide acceptance criteria for each TC (pass/fail conditions).
+
+7. Security & Privacy
+   - Store API keys and tokens in secure storage, never in repo.
+   - GDPR-like option to export/delete user data.
+   - Use HTTPS for all cloud communication.
+   - Minimize PII collection; if collecting, encrypt sensitive fields.
+
+8. Deliverables (what I expect from the Replit AI dev)
+   - Complete Flutter project source code (clean structure).
+   - README with setup steps, required API keys (Gemini, Firebase), and how to build APK/IPA.
+   - Signed debug APK (or instructions to produce release).
+   - Automated tests: unit, widget, and at least one integration test demonstrating offline -> sync flow.
+   - Clear TODOs & configuration file sample (.env.example) for API keys.
+   - Screenshots or short video demo of main flows (optional).
+
+9. Extra notes for implementer
+   - Keep UI simple, Arabic-first (RTL), responsive to various screen sizes.
+   - Use icons + color coding for income/expense.
+   - Make Gemini features explicitly opt-in due to privacy & API cost.
+   - Prefer modular code with repository pattern for easier testing.
+   - Provide stubs/mock for Gemini so app works without real API key.
