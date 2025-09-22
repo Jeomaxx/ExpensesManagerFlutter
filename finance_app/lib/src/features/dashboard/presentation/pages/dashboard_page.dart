@@ -4,7 +4,10 @@ import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../shared/theme/app_theme.dart';
 import '../../../../core/providers/auth_provider.dart';
+import '../../../../core/providers/dashboard_provider.dart';
 import '../../../../core/routing/app_router.dart';
+import '../../../../core/utils/currency_formatter.dart';
+import '../../../../core/models/transaction.dart';
 
 class DashboardPage extends ConsumerWidget {
   const DashboardPage({super.key});
@@ -12,7 +15,18 @@ class DashboardPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authProvider);
+    final dashboardState = ref.watch(dashboardProvider);
     final user = authState.user;
+
+    // Auto-load dashboard data when component builds
+    ref.listen<AsyncValue<void>>(dashboardDataProvider, (previous, next) {
+      // Handle any loading errors
+      next.whenOrNull(
+        error: (error, _) => ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error loading dashboard: $error')),
+        ),
+      );
+    });
 
     return Scaffold(
       appBar: AppBar(
@@ -46,7 +60,7 @@ class DashboardPage extends ConsumerWidget {
             const SizedBox(height: 24),
             
             // Balance Overview Card
-            _buildBalanceCard(context),
+            _buildBalanceCard(context, dashboardState),
             
             const SizedBox(height: 24),
             
@@ -56,12 +70,12 @@ class DashboardPage extends ConsumerWidget {
             const SizedBox(height: 24),
             
             // Recent Transactions Section
-            _buildRecentTransactions(context),
+            _buildRecentTransactions(context, dashboardState),
             
             const SizedBox(height: 24),
             
             // Monthly Summary
-            _buildMonthlySummary(context),
+            _buildMonthlySummary(context, dashboardState),
           ],
         ),
       ),
@@ -108,7 +122,18 @@ class DashboardPage extends ConsumerWidget {
     );
   }
 
-  Widget _buildBalanceCard(BuildContext context) {
+  Widget _buildBalanceCard(BuildContext context, DashboardState dashboardState) {
+    if (dashboardState.isLoading) {
+      return Card(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
+        ),
+      );
+    }
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -122,10 +147,16 @@ class DashboardPage extends ConsumerWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              '15,750.00 ${'currency_sar'.tr()}', // TODO: Get actual balance
+              CurrencyFormatter.formatAmount(
+                dashboardState.currentBalance,
+                'SAR',
+                context: context,
+              ),
               style: Theme.of(context).textTheme.displaySmall?.copyWith(
                 fontWeight: FontWeight.bold,
-                color: AppTheme.primaryColor,
+                color: dashboardState.currentBalance >= 0 
+                    ? AppTheme.primaryColor 
+                    : AppTheme.expenseColor,
               ),
             ),
             const SizedBox(height: 16),
@@ -135,7 +166,12 @@ class DashboardPage extends ConsumerWidget {
                   child: _buildBalanceItem(
                     context,
                     'monthly_income'.tr(),
-                    '+8,500.00',
+                    '+${CurrencyFormatter.formatAmount(
+                      dashboardState.monthlyIncome,
+                      'SAR',
+                      context: context,
+                      showCurrency: false,
+                    )}',
                     AppTheme.incomeColor,
                     Icons.trending_up,
                   ),
@@ -145,7 +181,12 @@ class DashboardPage extends ConsumerWidget {
                   child: _buildBalanceItem(
                     context,
                     'monthly_expenses'.tr(),
-                    '-6,250.00',
+                    '-${CurrencyFormatter.formatAmount(
+                      dashboardState.monthlyExpenses,
+                      'SAR',
+                      context: context,
+                      showCurrency: false,
+                    )}',
                     AppTheme.expenseColor,
                     Icons.trending_down,
                   ),
@@ -281,7 +322,7 @@ class DashboardPage extends ConsumerWidget {
     );
   }
 
-  Widget _buildRecentTransactions(BuildContext context) {
+  Widget _buildRecentTransactions(BuildContext context, DashboardState dashboardState) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -305,23 +346,45 @@ class DashboardPage extends ConsumerWidget {
           ],
         ),
         const SizedBox(height: 16),
-        // TODO: Replace with actual transaction list
-        _buildTransactionItem(context, 'Grocery Shopping', '-120.50', 'food', DateTime.now()),
-        _buildTransactionItem(context, 'Salary', '+5,000.00', 'income', DateTime.now().subtract(const Duration(days: 1))),
-        _buildTransactionItem(context, 'Gas Station', '-80.00', 'transportation', DateTime.now().subtract(const Duration(days: 2))),
+        dashboardState.isLoading
+            ? Center(child: CircularProgressIndicator())
+            : dashboardState.recentTransactions.isEmpty
+                ? Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Center(
+                        child: Column(
+                          children: [
+                            Icon(
+                              Icons.receipt_long_outlined,
+                              size: 48,
+                              color: AppTheme.textSecondaryColor,
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              'no_recent_transactions'.tr(),
+                              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                color: AppTheme.textSecondaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                : Column(
+                    children: dashboardState.recentTransactions
+                        .map((transaction) => _buildTransactionItem(context, transaction))
+                        .toList(),
+                  ),
       ],
     );
   }
 
-  Widget _buildTransactionItem(
-    BuildContext context,
-    String title,
-    String amount,
-    String category,
-    DateTime date,
-  ) {
-    final isExpense = amount.startsWith('-');
+  Widget _buildTransactionItem(BuildContext context, Transaction transaction) {
+    final isExpense = transaction.type == TransactionType.expense;
     final color = isExpense ? AppTheme.expenseColor : AppTheme.incomeColor;
+    final sign = isExpense ? '-' : '+';
     
     return Card(
       margin: const EdgeInsets.only(bottom: 8),
@@ -329,19 +392,24 @@ class DashboardPage extends ConsumerWidget {
         leading: CircleAvatar(
           backgroundColor: color.withOpacity(0.1),
           child: Icon(
-            _getCategoryIcon(category),
+            _getCategoryIcon(transaction.categoryId ?? 'other'),
             color: color,
           ),
         ),
-        title: Text(title),
+        title: Text(transaction.notes ?? 'transaction'.tr()),
         subtitle: Text(
-          DateFormat('MMM d, yyyy').format(date),
+          DateFormat('MMM d, yyyy').format(transaction.date),
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
             color: AppTheme.textSecondaryColor,
           ),
         ),
         trailing: Text(
-          amount,
+          '$sign${CurrencyFormatter.formatAmount(
+            transaction.amount,
+            'SAR',
+            context: context,
+            showCurrency: false,
+          )}',
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
             color: color,
             fontWeight: FontWeight.bold,
@@ -349,6 +417,9 @@ class DashboardPage extends ConsumerWidget {
         ),
         onTap: () {
           // TODO: Navigate to transaction details
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Transaction details coming soon!')),
+          );
         },
       ),
     );
@@ -367,7 +438,10 @@ class DashboardPage extends ConsumerWidget {
     }
   }
 
-  Widget _buildMonthlySummary(BuildContext context) {
+  Widget _buildMonthlySummary(BuildContext context, DashboardState dashboardState) {
+    final now = DateTime.now();
+    final monthName = DateFormat('MMMM yyyy').format(now);
+
     return Card(
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -382,31 +456,81 @@ class DashboardPage extends ConsumerWidget {
             ),
             const SizedBox(height: 16),
             Text(
-              'january_2024'.tr(), // TODO: Get current month
+              monthName,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppTheme.textSecondaryColor,
               ),
             ),
             const SizedBox(height: 16),
-            // TODO: Add chart widget here
-            Container(
-              height: 120,
-              decoration: BoxDecoration(
-                color: AppTheme.backgroundColor,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Center(
-                child: Text(
-                  'chart_placeholder'.tr(),
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                    color: AppTheme.textSecondaryColor,
+            if (dashboardState.isLoading)
+              Container(
+                height: 120,
+                child: Center(child: CircularProgressIndicator()),
+              )
+            else if (dashboardState.expensesByCategory.isEmpty)
+              Container(
+                height: 120,
+                decoration: BoxDecoration(
+                  color: AppTheme.backgroundColor,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Center(
+                  child: Text(
+                    'no_data_this_month'.tr(),
+                    style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                      color: AppTheme.textSecondaryColor,
+                    ),
                   ),
                 ),
-              ),
-            ),
+              )
+            else
+              _buildExpensesCategoryList(context, dashboardState),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildExpensesCategoryList(BuildContext context, DashboardState dashboardState) {
+    final sortedCategories = dashboardState.expensesByCategory.entries.toList()
+      ..sort((a, b) => b.value.compareTo(a.value));
+
+    return Column(
+      children: sortedCategories.take(5).map((entry) {
+        final percentage = dashboardState.monthlyExpenses > 0 
+            ? (entry.value / dashboardState.monthlyExpenses) * 100 
+            : 0.0;
+        
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 4),
+          child: Row(
+            children: [
+              Expanded(
+                flex: 3,
+                child: Text(
+                  entry.key,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: LinearProgressIndicator(
+                  value: percentage / 100,
+                  backgroundColor: AppTheme.backgroundColor,
+                  valueColor: AlwaysStoppedAnimation<Color>(AppTheme.primaryColor),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Text(
+                '${percentage.toStringAsFixed(1)}%',
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                  color: AppTheme.textSecondaryColor,
+                ),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
     );
   }
 

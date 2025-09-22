@@ -165,5 +165,9 @@
   "add_transaction": "إضافة معاملة",
   "january_2024": "يناير 2024",
   "chart_placeholder": "مخطط بياني (قريباً)",
-  "more": "المزيد"
+  "more": "المزيد",
+  
+  "no_recent_transactions": "لا توجد معاملات حديثة",
+  "no_data_this_month": "لا توجد بيانات لهذا الشهر",
+  "transaction": "معاملة"
 }

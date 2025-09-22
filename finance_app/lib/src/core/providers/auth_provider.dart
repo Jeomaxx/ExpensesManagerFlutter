@@ -206,7 +206,9 @@ class AuthNotifier extends StateNotifier<AuthState> {
       await DefaultDataService.instance.createDefaultCategories(userId);
     }
     
-    // TODO: Also ensure default account exists
+    // Create default account and sample transactions
+    await DefaultDataService.instance.createDefaultAccount(userId);
+    await DefaultDataService.instance.createSampleTransactions(userId);
   }
 }
 

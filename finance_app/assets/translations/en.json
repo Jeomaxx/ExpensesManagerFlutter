@@ -165,5 +165,9 @@
   "add_transaction": "Add Transaction",
   "january_2024": "January 2024",
   "chart_placeholder": "Chart (Coming Soon)",
-  "more": "More"
+  "more": "More",
+  
+  "no_recent_transactions": "No recent transactions",
+  "no_data_this_month": "No data for this month",
+  "transaction": "Transaction"
 }

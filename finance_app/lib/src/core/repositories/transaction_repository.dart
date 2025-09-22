@@ -180,6 +180,53 @@ class TransactionRepository {
     return categoryTotals;
   }
 
+  Future<double> getCurrentBalance(String userId) async {
+    final db = await _db;
+    final result = await db.rawQuery(
+      '''
+      SELECT 
+        COALESCE(SUM(CASE WHEN type = 'income' THEN amount ELSE 0 END), 0) -
+        COALESCE(SUM(CASE WHEN type = 'expense' THEN amount ELSE 0 END), 0) as balance
+      FROM transactions 
+      WHERE user_id = ? AND is_deleted = 0
+      ''',
+      [userId],
+    );
+    
+    return (result.first['balance'] as num?)?.toDouble() ?? 0.0;
+  }
+
+  Future<Map<String, double>> getExpensesByCategory(
+    String userId,
+    DateTime startDate,
+    DateTime endDate,
+  ) async {
+    final db = await _db;
+    final maps = await db.rawQuery(
+      '''
+      SELECT c.name as category_name, SUM(t.amount) as total
+      FROM transactions t
+      LEFT JOIN categories c ON t.category_id = c.id
+      WHERE t.user_id = ? 
+        AND t.type = 'expense' 
+        AND t.date >= ? 
+        AND t.date <= ? 
+        AND t.is_deleted = 0
+      GROUP BY t.category_id, c.name
+      ORDER BY total DESC
+      ''',
+      [userId, startDate.toIso8601String(), endDate.toIso8601String()],
+    );
+
+    final result = <String, double>{};
+    for (final map in maps) {
+      final categoryName = map['category_name'] as String? ?? 'Other';
+      final total = (map['total'] as num?)?.toDouble() ?? 0.0;
+      result[categoryName] = total;
+    }
+    return result;
+  }
+
   Transaction _mapToTransaction(Map<String, dynamic> map) {
     return Transaction(
       id: map['id'] as String,
