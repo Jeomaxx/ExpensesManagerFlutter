@@ -143,8 +143,7 @@ class DashboardPage extends ConsumerWidget {
             Text(
               CurrencyFormatter.formatAmount(
                 dashboardState.currentBalance,
-                'SAR',
-                context: context,
+                currencyCode: 'SAR',
               ),
               style: Theme.of(context).textTheme.displaySmall?.copyWith(
                 fontWeight: FontWeight.bold,
@@ -162,9 +161,7 @@ class DashboardPage extends ConsumerWidget {
                     'monthly_income'.tr(),
                     '+${CurrencyFormatter.formatAmount(
                       dashboardState.monthlyIncome,
-                      'SAR',
-                      context: context,
-                      showCurrency: false,
+                      currencyCode: 'SAR',
                     )}',
                     AppTheme.incomeColor,
                     Icons.trending_up,
@@ -177,9 +174,7 @@ class DashboardPage extends ConsumerWidget {
                     'monthly_expenses'.tr(),
                     '-${CurrencyFormatter.formatAmount(
                       dashboardState.monthlyExpenses,
-                      'SAR',
-                      context: context,
-                      showCurrency: false,
+                      currencyCode: 'SAR',
                     )}',
                     AppTheme.expenseColor,
                     Icons.trending_down,
@@ -398,9 +393,7 @@ class DashboardPage extends ConsumerWidget {
         trailing: Text(
           '$sign${CurrencyFormatter.formatAmount(
             transaction.amount,
-            'SAR',
-            context: context,
-            showCurrency: false,
+            currencyCode: 'SAR',
           )}',
           style: Theme.of(context).textTheme.titleMedium?.copyWith(
             color: color,

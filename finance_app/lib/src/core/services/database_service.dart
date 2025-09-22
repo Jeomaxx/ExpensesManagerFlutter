@@ -12,10 +12,22 @@ class DatabaseService {
 
   Future<Database> get database async {
     if (kIsWeb) {
-      throw UnsupportedError('Database operations are not supported on web platform yet. Please use the mobile app for full functionality.');
+      // For web platform, we'll use in-memory storage with mock data
+      // This allows the app to run and demonstrate features on web
+      print('Web platform detected: Using in-memory database for demonstration');
+      return _createMockDatabase();
     }
     _database ??= await _initDatabase();
     return _database!;
+  }
+
+  Future<Database> _createMockDatabase() async {
+    // Create an in-memory database for web compatibility
+    return await openDatabase(
+      ':memory:',
+      version: 2,
+      onCreate: _onCreate,
+    );
   }
 
   Future<Database> _initDatabase() async {

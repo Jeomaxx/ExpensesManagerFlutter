@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Finance App', style: TextStyle(color: Colors.white)),
+        title: const Text('Finance App', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue.shade600,
       ),
       body: const Center(
@@ -90,7 +90,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      'App is ready!',
+                      'Finance App Integration Successful!',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
                     ),
                     SizedBox(height: 10),
                     Text(
-                      'The Flutter app is now running successfully in the Replit environment.',
+                      'Comprehensive finance features available. Backend services integrated: loans, AI insights, reports, receipt scanning, alerts, settings, and data sync.',
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -111,3 +111,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+

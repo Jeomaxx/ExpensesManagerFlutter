@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:sqflite/sqflite.dart';
+import 'package:sqflite/sqflite.dart' hide Transaction;
 
-import '../models/transaction.dart' as app_models;
+import '../models/transaction.dart' as models;
 import '../services/database_service.dart';
 
 class TransactionRepository {
@@ -11,7 +11,7 @@ class TransactionRepository {
 
   Future<Database> get _db async => await DatabaseService.instance.database;
 
-  Future<List<app_models.Transaction>> getTransactionsByUserId({
+  Future<List<models.Transaction>> getTransactionsByUserId({
     required String userId,
     int? limit,
     int? offset,
@@ -19,7 +19,7 @@ class TransactionRepository {
     DateTime? endDate,
     String? accountId,
     String? categoryId,
-    TransactionType? type,
+    models.TransactionType? type,
   }) async {
     final db = await _db;
     
@@ -63,7 +63,7 @@ class TransactionRepository {
     return maps.map((map) => _mapToTransaction(map)).toList();
   }
 
-  Future<app_models.Transaction?> getTransactionById(String id) async {
+  Future<models.Transaction?> getTransactionById(String id) async {
     final db = await _db;
     final maps = await db.query(
       'transactions',
@@ -77,7 +77,7 @@ class TransactionRepository {
     return null;
   }
 
-  Future<String> createTransaction(app_models.Transaction transaction) async {
+  Future<String> createTransaction(models.Transaction transaction) async {
     final db = await _db;
     final transactionMap = _mapFromTransaction(transaction);
     
@@ -85,7 +85,7 @@ class TransactionRepository {
     return transaction.id;
   }
 
-  Future<void> updateTransaction(app_models.Transaction transaction) async {
+  Future<void> updateTransaction(models.Transaction transaction) async {
     final db = await _db;
     final transactionMap = _mapFromTransaction(transaction);
     
@@ -113,7 +113,7 @@ class TransactionRepository {
 
   Future<double> getTotalByType({
     required String userId,
-    required TransactionType type,
+    required models.TransactionType type,
     DateTime? startDate,
     DateTime? endDate,
     String? categoryId,
@@ -148,7 +148,7 @@ class TransactionRepository {
 
   Future<Map<String, double>> getCategoryTotals({
     required String userId,
-    required TransactionType type,
+    required models.TransactionType type,
     DateTime? startDate,
     DateTime? endDate,
   }) async {
@@ -227,15 +227,15 @@ class TransactionRepository {
     return result;
   }
 
-  app_models.Transaction _mapToTransaction(Map<String, dynamic> map) {
-    return app_models.Transaction(
+  models.Transaction _mapToTransaction(Map<String, dynamic> map) {
+    return models.Transaction(
       id: map['id'] as String,
       userId: map['user_id'] as String,
       accountId: map['account_id'] as String,
       amount: (map['amount'] as num).toDouble(),
-      type: TransactionType.values.firstWhere(
+      type: models.TransactionType.values.firstWhere(
         (e) => e.name == map['type'],
-        orElse: () => TransactionType.expense,
+        orElse: () => models.TransactionType.expense,
       ),
       categoryId: map['category_id'] as String,
       date: DateTime.parse(map['date'] as String),
@@ -254,7 +254,7 @@ class TransactionRepository {
     );
   }
 
-  Map<String, dynamic> _mapFromTransaction(app_models.Transaction transaction) {
+  Map<String, dynamic> _mapFromTransaction(models.Transaction transaction) {
     return {
       'id': transaction.id,
       'user_id': transaction.userId,

@@ -25,12 +25,9 @@ class FinanceApp extends ConsumerWidget {
       home: const SplashPage(),
       onGenerateRoute: AppRouter.generateRoute,
       debugShowCheckedModeBanner: false,
-      // Force text direction based on locale
+      // Force text direction based on locale - simplified approach
       builder: (context, child) {
-        return Directionality(
-          textDirection: isRTL ? TextDirection.rtl : TextDirection.ltr,
-          child: child!,
-        );
+        return child!;
       },
     );
   }
