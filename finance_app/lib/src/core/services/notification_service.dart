@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'notifications/notifications_client.dart';
-import 'notifications/notifications_client_web.dart'
-    if (dart.library.io) 'notifications/notifications_client_mobile.dart';
+import 'notifications/notifications_client_web.dart';
+import 'notifications/notifications_client_mobile.dart';
 
 NotificationsClient _createNotificationsClient() {
   if (kIsWeb) {

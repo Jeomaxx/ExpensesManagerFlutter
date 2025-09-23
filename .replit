@@ -25,7 +25,7 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd finance_app && flutter run -d web-server --web-port 5000 --web-hostname 0.0.0.0 --target=lib/main.dart"
+args = "cd finance_app && flutter run -d web-server --web-port 5000 --web-hostname 0.0.0.0 --target=lib/main_simple.dart"
 waitForPort = 5000
 
 [agent]
@@ -40,10 +40,14 @@ localPort = 33245
 externalPort = 3000
 
 [[ports]]
+localPort = 37315
+externalPort = 3002
+
+[[ports]]
 localPort = 38567
 externalPort = 3001
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["flutter", "run", "-d", "web-server", "--web-port", "5000", "--web-hostname", "0.0.0.0", "--target=lib/main_simple.dart", "--release"]
-build = ["flutter", "build", "web", "--release", "--target=lib/main_simple.dart"]
+run = ["flutter", "run", "-d", "web-server", "--web-port", "5000", "--web-hostname", "0.0.0.0", "--release"]
+build = ["flutter", "build", "web", "--release"]
