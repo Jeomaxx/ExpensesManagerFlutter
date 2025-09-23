@@ -1,0 +1,950 @@
+Installing build\app\outputs\flutter-apk\app-debug.apk...        1,510ms
+E/flutter (13344): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+E/flutter (13344): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+I/flutter (13344): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(94)] Using the Impeller rendering backend (OpenGLES).
+Syncing files to device sdk gphone64 x86 64...                      78ms
+
+Flutter run key commands.
+r Hot reload.
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:61106/A3jYW4AADOg=/
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Localization initialized
+I/Choreographer(13344): Skipped 130 frames!  The application may be doing too much work on its main thread.
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af94390, tid 13401
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+W/OpenGLRenderer(13344): Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+W/OpenGLRenderer(13344): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+D/EGL_emulation(13344): eglCreateContext: 0x7b681af954d0: maj 3 min 1 rcv 4
+D/EGL_emulation(13344): eglMakeCurrent: 0x7b681af954d0: ver 3 1 (tinfo 0x7b6a31518180) (first time)
+I/Gralloc4(13344): mapper 4.x is not supported
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af93610, tid 13450
+D/goldfish-address-space(13344): allocate: Ask for block of size 0x100
+D/goldfish-address-space(13344): allocate: ioctl allocate returned offset 0x3f3ffe000 size 0x2000
+W/Gralloc4(13344): allocator 4.x is not supported
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af94990, tid 13450
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(13344): eglMakeCurrent: 0x7b681af94d50: ver 3 1 (tinfo 0x7b6a31518200) (first time)
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:61106/A3jYW4AADOg=/
+I/flutter (13344): Notification permission granted
+I/Choreographer(13344): Skipped 31 frames!  The application may be doing too much work on its main thread.
+I/flutter (13344): Notification service initialized successfully
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Start
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init state
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init provider
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Load Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Load asset from assets/translations
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init provider
+I/Choreographer(13344): Skipped 51 frames!  The application may be doing too much work on its main thread.
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_1] not found
+D/EGL_emulation(13344): app_time_stats: avg=25.77ms min=4.40ms max=173.66ms count=35
+D/ProfileInstaller(13344): Installing profile for com.financeapp.finance_app
+D/EGL_emulation(13344): app_time_stats: avg=4545.73ms min=2.23ms max=31654.03ms count=7
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_2] not found
+D/EGL_emulation(13344): app_time_stats: avg=32.71ms min=8.99ms max=497.16ms count=34
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following NoSuchMethodError was thrown building DashboardPage(dirty, dependencies:
+[InheritedCupertinoTheme, UncontrolledProviderScope, _InheritedTheme,
+_LocalizationsScope-[GlobalKey#a3e88]], state: _ConsumerState#58b50):
+Class 'DashboardState' has no instance getter 'totalBalance'.
+Receiver: Instance of 'DashboardState'
+Tried calling: totalBalance
+
+The relevant error-causing widget was:
+  DashboardPage
+  DashboardPage:file:///C:/flutter/finance_app/lib/src/core/routing/app_router.dart:83:33
+
+When the exception was thrown, this was the stack:
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:38:5)
+#1      DashboardPage._buildBalanceOverview (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:130:32)
+#2      DashboardPage.build (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:61:13)
+#3      _ConsumerState.build (package:flutter_riverpod/src/consumer.dart:476:19)
+#4      StatefulElement.build (package:flutter/src/widgets/framework.dart:5823:27)
+#5      ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#6      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5715:15)
+#7      StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#8      Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#9      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+#10     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+#11     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+...     Normal element mounting (228 frames)
+#239    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+#240    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7159:36)
+#241    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+#242    Element.updateChildren (package:flutter/src/widgets/framework.dart:4201:11)
+#243    MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7192:17)
+#244    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#245    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#246    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#247    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#248    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#249    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#250    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#251    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#252    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#253    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#254    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#255    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#256    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#257    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#258    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#259    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#260    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#261    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#262    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#263    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#264    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#265    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#266    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#267    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#268    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#269    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#270    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#271    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#272    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#273    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#274    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#275    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#276    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#277    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#278    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#279    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+#280    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#281    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+#282    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#283    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#284    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#285    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#286    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#287    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#288    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#289    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#290    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#291    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#292    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#293    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#294    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2694:15)
+#295    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2752:11)
+#296    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3056:18)
+#297    WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:1240:21)
+#298    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+#299    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1438:15)
+#300    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1351:9)
+#301    SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1204:5)
+#302    _invoke (dart:ui/hooks.dart:331:13)
+#303    PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:444:5)
+#304    _drawFrame (dart:ui/hooks.dart:303:31)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+D/EGL_emulation(13344): app_time_stats: avg=269.32ms min=2.13ms max=2295.66ms count=10
+D/EGL_emulation(13344): app_time_stats: avg=814.58ms min=2.61ms max=9640.40ms count=12
+E/flutter (13344): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+E/flutter (13344): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+D/EGL_emulation(13344): eglCreateContext: 0x7b681af94d50: maj 3 min 1 rcv 4
+D/EGL_emulation(13344): eglCreateContext: 0x7b681af94150: maj 3 min 1 rcv 4
+I/flutter (13344): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(94)] Using the Impeller rendering backend (OpenGLES).
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af94990, tid 13614
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(13344): eglMakeCurrent: 0x7b681af94150: ver 3 1 (tinfo 0x7b6a31518200) (first time)
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Localization initialized
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af99c10, tid 13613
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(13344): eglMakeCurrent: 0x7b681af94d50: ver 3 1 (tinfo 0x7b6a31518100) (first time)
+I/flutter (13344): Notification permission granted
+I/flutter (13344): Notification service initialized successfully
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Start
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init state
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init provider
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Load Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Load asset from assets/translations
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init provider
+I/Choreographer(13344): Skipped 54 frames!  The application may be doing too much work on its main thread.
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_1] not found
+D/EGL_emulation(13344): app_time_stats: avg=43.76ms min=1.45ms max=1015.34ms count=38
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_2] not found
+D/EGL_emulation(13344): app_time_stats: avg=30.95ms min=3.79ms max=536.40ms count=35
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_3] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_3] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [get_started] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_2] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_3] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_3] not found
+
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following NoSuchMethodError was thrown building DashboardPage(dirty, dependencies:
+[InheritedCupertinoTheme, UncontrolledProviderScope, _InheritedTheme,
+_LocalizationsScope-[GlobalKey#db2ad]], state: _ConsumerState#6fcff):
+Class 'DashboardState' has no instance getter 'totalBalance'.
+Receiver: Instance of 'DashboardState'
+Tried calling: totalBalance
+
+The relevant error-causing widget was:
+  DashboardPage
+  DashboardPage:file:///C:/flutter/finance_app/lib/src/core/routing/app_router.dart:83:33
+
+When the exception was thrown, this was the stack:
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:38:5)
+#1      DashboardPage._buildBalanceOverview (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:130:32)
+#2      DashboardPage.build (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:61:13)
+#3      _ConsumerState.build (package:flutter_riverpod/src/consumer.dart:476:19)
+#4      StatefulElement.build (package:flutter/src/widgets/framework.dart:5823:27)
+#5      ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#6      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5715:15)
+#7      StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#8      Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#9      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+#10     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+#11     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+...     Normal element mounting (228 frames)
+#239    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+#240    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7159:36)
+#241    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+#242    Element.updateChildren (package:flutter/src/widgets/framework.dart:4201:11)
+#243    MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7192:17)
+#244    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#245    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#246    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#247    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#248    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#249    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#250    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#251    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#252    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#253    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#254    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#255    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#256    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#257    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#258    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#259    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#260    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#261    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#262    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#263    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#264    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#265    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#266    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#267    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#268    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#269    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#270    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#271    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#272    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#273    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#274    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#275    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#276    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#277    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#278    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#279    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+#280    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#281    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+#282    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#283    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#284    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#285    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#286    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#287    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#288    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#289    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#290    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#291    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#292    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#293    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#294    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2694:15)
+#295    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2752:11)
+#296    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3056:18)
+#297    WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:1240:21)
+#298    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+#299    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1438:15)
+#300    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1351:9)
+#301    SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1204:5)
+#302    _invoke (dart:ui/hooks.dart:331:13)
+#303    PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:444:5)
+#304    _drawFrame (dart:ui/hooks.dart:303:31)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+D/EGL_emulation(13344): app_time_stats: avg=77.78ms min=2.61ms max=2654.16ms count=40
+E/flutter (13344): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+E/flutter (13344): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+D/EGL_emulation(13344): eglCreateContext: 0x7b681af94150: maj 3 min 1 rcv 4
+D/EGL_emulation(13344): eglCreateContext: 0x7b681af9af90: maj 3 min 1 rcv 4
+I/flutter (13344): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(94)] Using the Impeller rendering backend (OpenGLES).
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af94c90, tid 13639
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(13344): eglMakeCurrent: 0x7b681af9af90: ver 3 1 (tinfo 0x7b6a31518100) (first time)
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Localization initialized
+D/HostConnection(13344): createUnique: call
+D/HostConnection(13344): HostConnection::get() New Host Connection established 0x7b681af9a450, tid 13638
+D/HostConnection(13344): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(13344): eglMakeCurrent: 0x7b681af94150: ver 3 1 (tinfo 0x7b6a31518200) (first time)
+I/flutter (13344): Notification permission granted
+I/flutter (13344): Notification service initialized successfully
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Start
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init state
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init provider
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Load Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Load asset from assets/translations
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (13344): [🌎 Easy Localization] [DEBUG] Init provider
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_1] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+D/EGL_emulation(13344): app_time_stats: avg=81.65ms min=2.74ms max=2457.06ms count=38
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [create_account] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [join_us_today] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [name] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [phone] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [optional] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [confirm_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [by_signing_up_you_agree] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [already_have_account] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+D/EGL_emulation(13344): app_time_stats: avg=394.52ms min=4.00ms max=1788.57ms count=5
+D/EGL_emulation(13344): app_time_stats: avg=77.68ms min=2.80ms max=882.08ms count=13
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F....ID 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(13344): app_time_stats: avg=3414.22ms min=1271.50ms max=5556.95ms count=2
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/EGL_emulation(13344): app_time_stats: avg=52.53ms min=2.78ms max=468.89ms count=23
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/EGL_emulation(13344): app_time_stats: avg=1107.95ms min=1107.95ms max=1107.95ms count=1
+D/EGL_emulation(13344): app_time_stats: avg=77.77ms min=12.63ms max=373.28ms count=13
+D/EGL_emulation(13344): app_time_stats: avg=144.23ms min=15.14ms max=498.66ms count=10
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring off
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/EGL_emulation(13344): app_time_stats: avg=131.52ms min=13.34ms max=351.41ms count=10
+D/EGL_emulation(13344): app_time_stats: avg=222.50ms min=68.46ms max=402.24ms count=5
+D/EGL_emulation(13344): app_time_stats: avg=213.77ms min=84.31ms max=486.09ms count=5
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring off
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/EGL_emulation(13344): app_time_stats: avg=144.00ms min=18.51ms max=501.56ms count=7
+D/EGL_emulation(13344): app_time_stats: avg=120.85ms min=13.36ms max=313.17ms count=9
+D/EGL_emulation(13344): app_time_stats: avg=240.49ms min=67.77ms max=489.40ms count=5
+D/EGL_emulation(13344): app_time_stats: avg=358.17ms min=178.77ms max=499.11ms count=4
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring off
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/EGL_emulation(13344): app_time_stats: avg=83.61ms min=5.67ms max=470.96ms count=12
+D/EGL_emulation(13344): app_time_stats: avg=359.37ms min=275.36ms max=501.37ms count=3
+D/EGL_emulation(13344): app_time_stats: avg=206.24ms min=49.41ms max=487.12ms count=5
+D/EGL_emulation(13344): app_time_stats: avg=289.06ms min=184.11ms max=503.99ms count=4
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring off
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/EGL_emulation(13344): app_time_stats: avg=125.62ms min=15.77ms max=482.91ms count=8
+D/EGL_emulation(13344): app_time_stats: avg=188.10ms min=15.72ms max=448.35ms count=6
+D/EGL_emulation(13344): app_time_stats: avg=205.66ms min=94.62ms max=489.88ms count=6
+D/EGL_emulation(13344): app_time_stats: avg=351.84ms min=198.94ms max=501.08ms count=4
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [invalid_email] not found
+D/EGL_emulation(13344): app_time_stats: avg=37.42ms min=7.88ms max=499.80ms count=40
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/EGL_emulation(13344): app_time_stats: avg=354.86ms min=64.82ms max=502.23ms count=3
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring off
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring on
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(13344): app_time_stats: avg=89.59ms min=2.69ms max=482.05ms count=14
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputMethodManager(13344): showSoftInput() view=io.flutter.embedding.android.FlutterView{82f6617 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/InsetsController(13344): show(ime(), fromIme=true)
+D/EGL_emulation(13344): app_time_stats: avg=96.22ms min=3.44ms max=501.29ms count=10
+D/EGL_emulation(13344): app_time_stats: avg=500.17ms min=498.75ms max=502.93ms count=3
+D/EGL_emulation(13344): app_time_stats: avg=97.00ms min=15.32ms max=499.70ms count=12
+D/EGL_emulation(13344): app_time_stats: avg=449.16ms min=363.35ms max=499.04ms count=3
+D/EGL_emulation(13344): app_time_stats: avg=339.14ms min=200.36ms max=485.97ms count=3
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [create_account] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [join_us_today] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [name] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [phone] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [optional] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [confirm_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [by_signing_up_you_agree] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [already_have_account] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+D/EGL_emulation(13344): app_time_stats: avg=252.96ms min=72.17ms max=500.45ms count=4
+
+══╡ EXCEPTION CAUGHT BY WIDGETS LIBRARY ╞═══════════════════════════════════════════════════════════
+The following NoSuchMethodError was thrown building DashboardPage(dirty, dependencies:
+[InheritedCupertinoTheme, UncontrolledProviderScope, _InheritedTheme,
+_LocalizationsScope-[GlobalKey#ea175]], state: _ConsumerState#09a02):
+Class 'DashboardState' has no instance getter 'totalBalance'.
+Receiver: Instance of 'DashboardState'
+Tried calling: totalBalance
+
+The relevant error-causing widget was:
+  DashboardPage
+  DashboardPage:file:///C:/flutter/finance_app/lib/src/core/routing/app_router.dart:83:33
+
+When the exception was thrown, this was the stack:
+#0      Object.noSuchMethod (dart:core-patch/object_patch.dart:38:5)
+#1      DashboardPage._buildBalanceOverview (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:130:32)
+#2      DashboardPage.build (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:61:13)
+#3      _ConsumerState.build (package:flutter_riverpod/src/consumer.dart:476:19)
+#4      StatefulElement.build (package:flutter/src/widgets/framework.dart:5823:27)
+#5      ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+#6      ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5715:15)
+#7      StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#8      Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#9      ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+#10     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+#11     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+...     Normal element mounting (228 frames)
+#239    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+#240    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7159:36)
+#241    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+#242    Element.updateChildren (package:flutter/src/widgets/framework.dart:4201:11)
+#243    MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7192:17)
+#244    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#245    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#246    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#247    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#248    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#249    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#250    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#251    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#252    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#253    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#254    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#255    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#256    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#257    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#258    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#259    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#260    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#261    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#262    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#263    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#264    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#265    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#266    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#267    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+#268    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#269    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#270    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#271    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#272    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#273    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#274    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#275    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#276    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#277    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+#278    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#279    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+#280    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#281    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+#282    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#283    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#284    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#285    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#286    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#287    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#288    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#289    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+#290    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+#291    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+#292    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+#293    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+#294    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2694:15)
+#295    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2752:11)
+#296    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3056:18)
+#297    WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:1240:21)
+#298    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+#299    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1438:15)
+#300    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1351:9)
+#301    SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1204:5)
+#302    _invoke (dart:ui/hooks.dart:331:13)
+#303    PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:444:5)
+#304    _drawFrame (dart:ui/hooks.dart:303:31)
+
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [create_account] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [join_us_today] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [name] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [phone] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [optional] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [confirm_password] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [by_signing_up_you_agree] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [already_have_account] not found
+I/flutter (13344): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+E/flutter (13344): [ERROR:flutter/runtime/dart_vm_initializer.cc(40)] Unhandled Exception: 'package:riverpod/src/framework/element.dart': Failed assertion: line 479 pos 11: '_debugCurrentlyBuildingElement == null ||
+E/flutter (13344):               _debugCurrentlyBuildingElement == this': Providers are not allowed to modify other providers during their initialization.
+E/flutter (13344):
+E/flutter (13344): The provider AutoDisposeFutureProvider<void>#a6f2d modified StateNotifierProvider<DashboardNotifier, DashboardState>#6b1b8 while building.
+E/flutter (13344):
+E/flutter (13344): #0      _AssertionError._doThrowNew (dart:core-patch/errors_patch.dart:67:4)
+E/flutter (13344): #1      _AssertionError._throwNew (dart:core-patch/errors_patch.dart:49:5)
+E/flutter (13344): #2      ProviderElementBase._notifyListeners.<anonymous closure> (package:riverpod/src/framework/element.dart:479:11)
+E/flutter (13344): #3      ProviderElementBase._notifyListeners (package:riverpod/src/framework/element.dart:490:8)
+E/flutter (13344): #4      ProviderElementBase.setState (package:riverpod/src/framework/element.dart:140:7)
+E/flutter (13344): #5      StateNotifier.state= (package:state_notifier/state_notifier.dart:227:31)
+E/flutter (13344): #6      DashboardNotifier.loadDashboardData (package:finance_app/src/core/providers/dashboard_provider.dart:61:5)
+E/flutter (13344): #7      dashboardDataProvider.<anonymous closure> (package:finance_app/src/core/providers/dashboard_provider.dart:136:29)
+E/flutter (13344): #8      AutoDisposeFutureProvider._create (package:riverpod/src/future_provider/auto_dispose.dart:46:16)
+E/flutter (13344): #9      FutureProviderElement.create.<anonymous closure> (package:riverpod/src/future_provider/base.dart:117:22)
+E/flutter (13344): #10     FutureHandlerProviderElementMixin.handleFuture.<anonymous closure> (package:riverpod/src/async_notifier/base.dart:341:30)
+E/flutter (13344): #11     FutureHandlerProviderElementMixin._handleAsync (package:riverpod/src/async_notifier/base.dart:388:47)
+E/flutter (13344): #12     FutureHandlerProviderElementMixin.handleFuture (package:riverpod/src/async_notifier/base.dart:335:5)
+E/flutter (13344): #13     FutureProviderElement.create (package:riverpod/src/future_provider/base.dart:116:5)
+E/flutter (13344): #14     ProviderElementBase.buildState (package:riverpod/src/framework/element.dart:426:7)
+E/flutter (13344): #15     ProviderElementBase.mount (package:riverpod/src/framework/element.dart:228:5)
+E/flutter (13344): #16     _StateReader._create (package:riverpod/src/framework/container.dart:47:11)
+E/flutter (13344): #17     _StateReader.getElement (package:riverpod/src/framework/container.dart:35:52)
+E/flutter (13344): #18     ProviderContainer.readProviderElement.<anonymous closure> (package:riverpod/src/framework/container.dart:440:40)
+E/flutter (13344): #19     ProviderContainer.readProviderElement (package:riverpod/src/framework/container.dart:475:8)
+E/flutter (13344): #20     ProviderBase.addListener (package:riverpod/src/framework/provider_base.dart:79:26)
+E/flutter (13344): #21     ProviderContainer.listen (package:riverpod/src/framework/container.dart:280:21)
+E/flutter (13344): #22     ConsumerStatefulElement.listen (package:flutter_riverpod/src/consumer.dart:607:28)
+E/flutter (13344): #23     DashboardPage.build (package:finance_app/src/features/dashboard/presentation/pages/dashboard_page.dart:23:9)
+E/flutter (13344): #24     _ConsumerState.build (package:flutter_riverpod/src/consumer.dart:476:19)
+E/flutter (13344): #25     StatefulElement.build (package:flutter/src/widgets/framework.dart:5823:27)
+E/flutter (13344): #26     ConsumerStatefulElement.build (package:flutter_riverpod/src/consumer.dart:539:20)
+E/flutter (13344): #27     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5715:15)
+E/flutter (13344): #28     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #29     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #30     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #31     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #32     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #33     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #34     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #35     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #36     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #37     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #38     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #39     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #40     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #41     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #42     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #43     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #44     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #45     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #46     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #47     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #48     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #49     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #50     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #51     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #52     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #53     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #54     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #55     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #56     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #57     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #58     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #59     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #60     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #61     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #62     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #63     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #64     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #65     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #66     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #67     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #68     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #69     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #70     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #71     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #72     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #73     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #74     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #75     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #76     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #77     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #78     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #79     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #80     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #81     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #82     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #83     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #84     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #85     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #86     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #87     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #88     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #89     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #90     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #91     ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #92     StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #93     Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #94     ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #95     StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #96     ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #97     Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #98     Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #99     SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #100    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #101    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #102    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #103    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #104    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #105    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #106    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #107    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #108    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #109    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #110    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #111    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #112    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #113    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #114    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #115    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #116    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #117    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #118    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #119    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #120    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #121    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #122    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #123    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #124    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #125    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #126    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #127    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #128    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #129    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #130    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #131    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #132    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #133    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #134    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #135    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #136    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #137    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #138    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #139    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #140    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #141    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #142    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #143    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #144    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #145    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #146    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #147    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #148    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #149    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #150    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #151    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #152    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #153    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #154    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #155    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #156    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #157    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #158    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #159    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #160    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #161    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #162    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #163    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #164    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #165    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #166    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #167    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #168    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #169    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #170    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #171    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #172    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #173    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #174    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #175    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #176    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #177    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #178    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #179    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #180    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #181    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #182    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #183    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #184    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #185    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #186    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #187    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #188    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #189    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #190    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #191    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #192    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #193    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #194    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #195    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #196    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #197    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #198    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #199    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #200    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #201    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #202    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #203    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #204    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #205    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #206    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #207    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #208    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #209    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #210    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #211    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #212    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #213    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #214    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #215    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #216    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #217    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #218    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #219    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #220    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #221    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #222    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #223    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #224    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #225    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #226    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #227    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #228    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #229    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #230    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #231    SingleChildRenderObjectElement.mount (package:flutter/src/widgets/framework.dart:7008:14)
+E/flutter (13344): #232    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #233    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #234    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #235    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #236    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #237    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #238    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #239    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #240    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #241    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #242    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #243    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #244    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #245    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #246    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #247    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #248    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #249    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #250    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #251    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #252    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #253    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #254    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #255    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #256    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #257    ComponentElement._firstBuild (package:flutter/src/widgets/framework.dart:5697:5)
+E/flutter (13344): #258    StatefulElement._firstBuild (package:flutter/src/widgets/framework.dart:5865:11)
+E/flutter (13344): #259    ComponentElement.mount (package:flutter/src/widgets/framework.dart:5691:5)
+E/flutter (13344): #260    Element.inflateWidget (package:flutter/src/widgets/framework.dart:4539:16)
+E/flutter (13344): #261    MultiChildRenderObjectElement.inflateWidget (package:flutter/src/widgets/framework.dart:7159:36)
+E/flutter (13344): #262    Element.updateChild (package:flutter/src/widgets/framework.dart:4004:18)
+E/flutter (13344): #263    Element.updateChildren (package:flutter/src/widgets/framework.dart:4201:11)
+E/flutter (13344): #264    MultiChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7192:17)
+E/flutter (13344): #265    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #266    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #267    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #268    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #269    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+E/flutter (13344): #270    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #271    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #272    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #273    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+E/flutter (13344): #274    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #275    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #276    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #277    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+E/flutter (13344): #278    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+E/flutter (13344): #279    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #280    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #281    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #282    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #283    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+E/flutter (13344): #284    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #285    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #286    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #287    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+E/flutter (13344): #288    _InheritedNotifierElement.update (package:flutter/src/widgets/inherited_notifier.dart:108:11)
+E/flutter (13344): #289    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #290    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #291    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #292    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #293    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+E/flutter (13344): #294    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #295    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #296    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #297    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #298    StatefulElement.update (package:flutter/src/widgets/framework.dart:5899:5)
+E/flutter (13344): #299    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #300    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+E/flutter (13344): #301    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #302    SingleChildRenderObjectElement.update (package:flutter/src/widgets/framework.dart:7015:14)
+E/flutter (13344): #303    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #304    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #305    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #306    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+E/flutter (13344): #307    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #308    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #309    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #310    ProxyElement.update (package:flutter/src/widgets/framework.dart:6041:5)
+E/flutter (13344): #311    Element.updateChild (package:flutter/src/widgets/framework.dart:3982:15)
+E/flutter (13344): #312    ComponentElement.performRebuild (package:flutter/src/widgets/framework.dart:5738:16)
+E/flutter (13344): #313    StatefulElement.performRebuild (package:flutter/src/widgets/framework.dart:5874:11)
+E/flutter (13344): #314    Element.rebuild (package:flutter/src/widgets/framework.dart:5427:7)
+E/flutter (13344): #315    BuildScope._tryRebuild (package:flutter/src/widgets/framework.dart:2694:15)
+E/flutter (13344): #316    BuildScope._flushDirtyElements (package:flutter/src/widgets/framework.dart:2752:11)
+E/flutter (13344): #317    BuildOwner.buildScope (package:flutter/src/widgets/framework.dart:3056:18)
+E/flutter (13344): #318    WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:1240:21)
+E/flutter (13344): #319    RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+E/flutter (13344): #320    SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1438:15)
+E/flutter (13344): #321    SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1351:9)
+E/flutter (13344): #322    SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1204:5)
+E/flutter (13344): #323    _invoke (dart:ui/hooks.dart:331:13)
+E/flutter (13344): #324    PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:444:5)
+E/flutter (13344): #325    _drawFrame (dart:ui/hooks.dart:303:31)
+E/flutter (13344):
+D/EGL_emulation(13344): app_time_stats: avg=2094.01ms min=2.36ms max=31169.59ms count=15
+D/InputConnectionAdaptor(13344): The input method toggled cursor monitoring off
+D/EGL_emulation(13344): app_time_stats: avg=27.70ms min=4.37ms max=197.95ms count=31
+D/EGL_emulation(13344): app_time_stats: avg=405.33ms min=3.33ms max=3876.27ms count=10
+

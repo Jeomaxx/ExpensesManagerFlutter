@@ -1,4 +1,4 @@
-modules = ["web"]
+modules = ["web", "flutter"]
 
 [nix]
 channel = "stable-25_05"
@@ -46,6 +46,10 @@ externalPort = 3001
 [[ports]]
 localPort = 38583
 externalPort = 3002
+
+[[ports]]
+localPort = 42875
+externalPort = 3003
 
 [deployment]
 deploymentTarget = "autoscale"
