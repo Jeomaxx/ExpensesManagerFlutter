@@ -1,26 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize EasyLocalization
-  await EasyLocalization.ensureInitialized();
-  
   print('Starting Finance App in simple mode for Replit compatibility');
   
   runApp(
-    EasyLocalization(
-      supportedLocales: const [
-        Locale('ar', 'SA'), // Arabic
-        Locale('en', 'US'), // English
-      ],
-      path: 'assets/translations',
-      fallbackLocale: const Locale('en', 'US'),
-      child: const ProviderScope(
-        child: SimpleFinanceApp(),
-      ),
+    const ProviderScope(
+      child: SimpleFinanceApp(),
     ),
   );
 }
@@ -32,9 +20,6 @@ class SimpleFinanceApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       title: 'Finance App',
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
