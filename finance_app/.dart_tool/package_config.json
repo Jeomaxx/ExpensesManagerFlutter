@@ -182,6 +182,18 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "easy_localization",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/easy_localization-3.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "easy_logger",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/easy_logger-0.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "equatable",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/equatable-2.0.7",
       "packageUri": "lib/",
@@ -272,6 +284,42 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_secure_storage",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_macos",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_macos-3.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_web-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_secure_storage_windows",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_svg",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_svg-2.2.1",
       "packageUri": "lib/",
@@ -348,6 +396,12 @@
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/io-1.0.5",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/js-0.6.7",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "json_annotation",
@@ -576,6 +630,48 @@
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/riverpod-2.6.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "shared_preferences_android",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.13",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "shelf",

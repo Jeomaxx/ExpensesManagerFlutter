@@ -85,8 +85,12 @@ class DateFormatter {
   // Helper method to get locale from context
   static String _getLocaleFromContext(BuildContext? context) {
     if (context != null) {
-      return context.locale.languageCode;
+      try {
+        return context.locale.languageCode;
+      } catch (e) {
+        return 'en'; // Fallback to English if context.locale is not available
+      }
     }
-    return 'ar'; // Fallback to Arabic if no context available
+    return 'en'; // Fallback to English if no context available
   }
 }

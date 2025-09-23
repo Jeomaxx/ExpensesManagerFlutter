@@ -28,6 +28,7 @@ dependencies:
 
   # Utilities
   intl: ^0.20.0
+  easy_localization: ^3.0.7
   json_annotation: ^4.9.0
   equatable: ^2.0.5
   uuid: ^4.4.2
@@ -58,6 +59,7 @@ dependencies:
 
   # Encryption
   crypto: ^3.0.5
+  flutter_secure_storage: ^9.2.2
 
   # Device info
   device_info_plus: ^10.1.2

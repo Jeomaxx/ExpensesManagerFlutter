@@ -214,7 +214,7 @@ class AppRouter {
                   Text('Page under development: ${settings.name}'),
                   const SizedBox(height: 16),
                   ElevatedButton(
-                    onPressed: () => Navigator.of(_).pop(),
+                    onPressed: () => Navigator.of(context).pop(),
                     child: const Text('Go Back'),
                   ),
                 ],

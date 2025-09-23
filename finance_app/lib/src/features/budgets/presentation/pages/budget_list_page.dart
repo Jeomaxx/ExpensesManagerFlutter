@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/models/budget.dart';
 import '../../../../core/utils/currency_formatter.dart';

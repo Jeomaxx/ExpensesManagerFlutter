@@ -25,7 +25,7 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "cd finance_app && flutter run -d web-server --web-port 5000 --web-hostname 0.0.0.0 --target=lib/main_simple.dart"
+args = "cd finance_app && flutter run -d web-server --web-port 5000 --web-hostname 0.0.0.0 --target=lib/main.dart"
 waitForPort = 5000
 
 [agent]
