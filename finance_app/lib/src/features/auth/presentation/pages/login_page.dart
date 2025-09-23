@@ -228,8 +228,11 @@ class _LoginPageState extends ConsumerState<LoginPage> {
 
               // Continue as Guest
               TextButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacementNamed(AppRouter.dashboard);
+                onPressed: () async {
+                  final success = await ref.read(authProvider.notifier).signInAsGuest();
+                  if (success && mounted) {
+                    Navigator.of(context).pushReplacementNamed(AppRouter.dashboard);
+                  }
                 },
                 child: Text('continue_as_guest'.tr()),
               ),

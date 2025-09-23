@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 import '../../../../shared/theme/app_theme.dart';
 import '../../../../core/routing/app_router.dart';
+import '../../../../core/providers/auth_provider.dart';
 
-class OnboardingPage extends StatefulWidget {
+class OnboardingPage extends ConsumerStatefulWidget {
   const OnboardingPage({super.key});
 
   @override
-  State<OnboardingPage> createState() => _OnboardingPageState();
+  ConsumerState<OnboardingPage> createState() => _OnboardingPageState();
 }
 
-class _OnboardingPageState extends State<OnboardingPage> {
+class _OnboardingPageState extends ConsumerState<OnboardingPage> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
 
@@ -191,9 +193,11 @@ class _OnboardingPageState extends State<OnboardingPage> {
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
-                        onPressed: () {
-                          // TODO: Navigate to dashboard as guest
-                          Navigator.of(context).pushReplacementNamed(AppRouter.dashboard);
+                        onPressed: () async {
+                          final success = await ref.read(authProvider.notifier).signInAsGuest();
+                          if (success && mounted) {
+                            Navigator.of(context).pushReplacementNamed(AppRouter.dashboard);
+                          }
                         },
                         child: Text('continue_as_guest'.tr()),
                       ),

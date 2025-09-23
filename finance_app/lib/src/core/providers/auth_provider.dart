@@ -149,7 +149,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
         email: email,
         phone: phone,
         settings: {
-          'currency': 'SAR',
+          'currency': 'EGP',
           'language': 'ar',
           'theme': 'light',
           'notifications': true,
@@ -171,6 +171,46 @@ class AuthNotifier extends StateNotifier<AuthState> {
       
       state = state.copyWith(
         user: user,
+        isAuthenticated: true,
+        isLoading: false,
+      );
+      return true;
+    } catch (e) {
+      state = state.copyWith(
+        error: e.toString(),
+        isLoading: false,
+      );
+      return false;
+    }
+  }
+
+  Future<bool> signInAsGuest() async {
+    state = state.copyWith(isLoading: true, error: null);
+
+    try {
+      // Create a guest user with a temporary ID
+      final timestamp = DateTime.now().millisecondsSinceEpoch;
+      final guestId = 'guest_$timestamp';
+      
+      final guestUser = User(
+        id: guestId,
+        name: 'Guest User',
+        email: 'guest@local.app',
+        settings: {'currency': 'EGP', 'theme': 'light'},
+        createdAt: DateTime.now(),
+        lastModified: DateTime.now(),
+      );
+
+      // Create default data for guest user
+      try {
+        await _ensureDefaultData(guestUser.id);
+      } catch (e) {
+        print('Failed to create guest default data: $e');
+        // Don't fail the guest process if default data creation fails
+      }
+      
+      state = state.copyWith(
+        user: guestUser,
         isAuthenticated: true,
         isLoading: false,
       );

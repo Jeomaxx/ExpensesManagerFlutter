@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 
 class CurrencyFormatter {
   static String format(double amount, {
-    String currencyCode = 'SAR',
+    String currencyCode = 'EGP',
     String? locale,
     BuildContext? context,
   }) {
@@ -19,7 +19,7 @@ class CurrencyFormatter {
   }
 
   static String formatCompact(double amount, {
-    String currencyCode = 'SAR',
+    String currencyCode = 'EGP',
     String? locale,
     BuildContext? context,
   }) {
@@ -121,7 +121,7 @@ class CurrencyFormatter {
   }
 
   // Add a static method called formatAmount that many files expect
-  static String formatAmount(double amount, {String currencyCode = 'SAR'}) {
+  static String formatAmount(double amount, {String currencyCode = 'EGP'}) {
     return format(amount, currencyCode: currencyCode);
   }
 }

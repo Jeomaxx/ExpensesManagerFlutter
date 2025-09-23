@@ -159,7 +159,7 @@ class DefaultDataService {
       name: 'Cash',
       type: AccountType.cash,
       balance: 0.0,
-      currency: 'SAR',
+      currency: 'EGP',
       description: 'Default cash account',
       isActive: true,
       createdAt: now,
