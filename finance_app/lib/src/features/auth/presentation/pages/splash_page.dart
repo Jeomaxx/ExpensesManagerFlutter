@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:easy_localization/easy_localization.dart';
+// Localization removed for web compatibility
 
 import '../../../../shared/theme/app_theme.dart';
 import '../../../../core/routing/app_router.dart';

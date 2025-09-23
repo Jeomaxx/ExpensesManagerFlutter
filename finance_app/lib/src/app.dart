@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'shared/theme/app_theme.dart';
 import 'features/auth/presentation/pages/splash_page.dart';
@@ -11,23 +11,29 @@ class FinanceApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // Determine text direction based on locale
-    final isRTL = context.locale.languageCode == 'ar';
-    
     return MaterialApp(
       title: 'Finance App',
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('ar', 'SA'),
+      ],
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: const SplashPage(),
       onGenerateRoute: AppRouter.generateRoute,
       debugShowCheckedModeBanner: false,
-      // Force text direction based on locale - simplified approach
+      // Simple builder setup
       builder: (context, child) {
-        return child!;
+        return Directionality(
+          textDirection: TextDirection.ltr,
+          child: child!,
+        );
       },
     );
   }

@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';\nimport 'package:intl/intl.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:easy_localization/easy_localization.dart';
+// Localization removed for web compatibility
 
 import '../../../../shared/theme/app_theme.dart';
 import '../../../../core/providers/auth_provider.dart';
@@ -30,7 +30,7 @@ class DashboardPage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('dashboard'.tr()),
+        title: const Text('Dashboard'),
         actions: [
           IconButton(
             icon: const Icon(Icons.notifications_outlined),
@@ -81,7 +81,7 @@ class DashboardPage extends ConsumerWidget {
           Navigator.of(context).pushNamed(AppRouter.addTransaction);
         },
         icon: const Icon(Icons.add),
-        label: Text('add_transaction'.tr()),
+        label: const Text('Add Transaction'),
       ),
       bottomNavigationBar: _buildBottomNavigationBar(context),
     );
@@ -98,7 +98,7 @@ class DashboardPage extends ConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '${'welcome'.tr()}, $userName!',
+            'Welcome, $userName!',
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -106,7 +106,7 @@ class DashboardPage extends ConsumerWidget {
           ),
           const SizedBox(height: 8),
           Text(
-            'manage_your_finances_today'.tr(),
+            'Manage your finances today',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
               color: Colors.white.withOpacity(0.9),
             ),
@@ -134,7 +134,7 @@ class DashboardPage extends ConsumerWidget {
         child: Column(
           children: [
             Text(
-              'total_balance'.tr(),
+              'Total Balance',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
                 color: AppTheme.textSecondaryColor,
               ),
@@ -158,7 +158,7 @@ class DashboardPage extends ConsumerWidget {
                 Expanded(
                   child: _buildBalanceItem(
                     context,
-                    'monthly_income'.tr(),
+                    'Monthly Income',
                     '+${CurrencyFormatter.formatAmount(
                       dashboardState.monthlyIncome,
                       currencyCode: 'SAR',
@@ -171,7 +171,7 @@ class DashboardPage extends ConsumerWidget {
                 Expanded(
                   child: _buildBalanceItem(
                     context,
-                    'monthly_expenses'.tr(),
+                    'Monthly Expenses',
                     '-${CurrencyFormatter.formatAmount(
                       dashboardState.monthlyExpenses,
                       currencyCode: 'SAR',
@@ -230,7 +230,7 @@ class DashboardPage extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'quick_actions'.tr(),
+          'Quick Actions',
           style: Theme.of(context).textTheme.titleLarge?.copyWith(
             fontWeight: FontWeight.bold,
           ),
@@ -241,7 +241,7 @@ class DashboardPage extends ConsumerWidget {
             Expanded(
               child: _buildActionButton(
                 context,
-                'add_income'.tr(),
+                'Add Income',
                 Icons.add_circle_outline,
                 AppTheme.incomeColor,
                 () {
@@ -255,7 +255,7 @@ class DashboardPage extends ConsumerWidget {
             Expanded(
               child: _buildActionButton(
                 context,
-                'add_expense'.tr(),
+                'Add Expense',
                 Icons.remove_circle_outline,
                 AppTheme.expenseColor,
                 () {
@@ -269,7 +269,7 @@ class DashboardPage extends ConsumerWidget {
             Expanded(
               child: _buildActionButton(
                 context,
-                'scan_receipt'.tr(),
+                'Scan Receipt',
                 Icons.camera_alt_outlined,
                 AppTheme.accentColor,
                 () {
@@ -319,7 +319,7 @@ class DashboardPage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'recent_transactions'.tr(),
+              'Recent Transactions',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -328,7 +328,7 @@ class DashboardPage extends ConsumerWidget {
               onPressed: () {
                 Navigator.of(context).pushNamed(AppRouter.transactionsList);
               },
-              child: Text('view_all'.tr()),
+              child: const Text('View All'),
             ),
           ],
         ),
@@ -349,7 +349,7 @@ class DashboardPage extends ConsumerWidget {
                             ),
                             const SizedBox(height: 8),
                             Text(
-                              'no_recent_transactions'.tr(),
+                              'No recent transactions',
                               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                                 color: AppTheme.textSecondaryColor,
                               ),
@@ -383,7 +383,7 @@ class DashboardPage extends ConsumerWidget {
             color: color,
           ),
         ),
-        title: Text(transaction.notes ?? 'transaction'.tr()),
+        title: Text(transaction.notes ?? 'Transaction'),
         subtitle: Text(
           DateFormat('MMM d, yyyy').format(transaction.date),
           style: Theme.of(context).textTheme.bodySmall?.copyWith(
@@ -434,7 +434,7 @@ class DashboardPage extends ConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'monthly_summary'.tr(),
+              'Monthly Summary',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                 fontWeight: FontWeight.bold,
               ),
@@ -461,7 +461,7 @@ class DashboardPage extends ConsumerWidget {
                 ),
                 child: Center(
                   child: Text(
-                    'no_data_this_month'.tr(),
+                    'No data this month',
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                       color: AppTheme.textSecondaryColor,
                     ),
@@ -527,27 +527,27 @@ class DashboardPage extends ConsumerWidget {
         BottomNavigationBarItem(
           icon: const Icon(Icons.home_outlined),
           activeIcon: const Icon(Icons.home),
-          label: 'dashboard'.tr(),
+          label: 'Dashboard',
         ),
         BottomNavigationBarItem(
           icon: const Icon(Icons.receipt_long_outlined),
           activeIcon: const Icon(Icons.receipt_long),
-          label: 'transactions'.tr(),
+          label: 'Transactions',
         ),
         BottomNavigationBarItem(
           icon: const Icon(Icons.account_balance_wallet_outlined),
           activeIcon: const Icon(Icons.account_balance_wallet),
-          label: 'accounts'.tr(),
+          label: 'Accounts',
         ),
         BottomNavigationBarItem(
           icon: const Icon(Icons.bar_chart_outlined),
           activeIcon: const Icon(Icons.bar_chart),
-          label: 'reports'.tr(),
+          label: 'Reports',
         ),
         BottomNavigationBarItem(
           icon: const Icon(Icons.more_horiz_outlined),
           activeIcon: const Icon(Icons.more_horiz),
-          label: 'more'.tr(),
+          label: 'More',
         ),
       ],
       onTap: (index) {

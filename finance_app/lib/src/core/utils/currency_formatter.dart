@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:easy_localization/easy_localization.dart';
+// Localization removed for web compatibility
 
 class CurrencyFormatter {
   static String format(double amount, {
@@ -81,7 +81,7 @@ class CurrencyFormatter {
   // Helper method to get locale string from context
   static String _getLocaleString(BuildContext? context) {
     if (context != null) {
-      final locale = context.locale;
+      final locale = Localizations.localeOf(context);
       return '${locale.languageCode}_${locale.countryCode}';
     }
     return 'ar_SA'; // Fallback to Arabic Saudi Arabia
