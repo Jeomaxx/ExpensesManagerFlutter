@@ -1,0 +1,73 @@
+  GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:534:20)
+#12     GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:499:22)
+#13     RendererBinding.dispatchEvent (package:flutter/src/rendering/binding.dart:473:11)
+#14     GestureBinding._handlePointerEventImmediately (package:flutter/src/gestures/binding.dart:437:7)
+#15     GestureBinding.handlePointerEvent (package:flutter/src/gestures/binding.dart:394:5)
+#16     GestureBinding._flushPointerEventQueue (package:flutter/src/gestures/binding.dart:341:7)
+#17     GestureBinding._handlePointerDataPacket (package:flutter/src/gestures/binding.dart:308:9)
+#18     _invoke1 (dart:ui/hooks.dart:347:13)
+#19     PlatformDispatcher._dispatchPointerDataPacket (dart:ui/platform_dispatcher.dart:467:7)
+#20     _dispatchPointerDataPacket (dart:ui/hooks.dart:282:31)
+
+Handler: "onTap"
+Recognizer:
+  TapGestureRecognizer#b058d
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+D/EGL_emulation(16105): app_time_stats: avg=16.23ms min=2.47ms max=606.86ms count=50
+D/EGL_emulation(16105): app_time_stats: avg=63.52ms min=13.24ms max=1845.89ms count=39
+D/EGL_emulation(16105): app_time_stats: avg=26.38ms min=13.61ms max=385.19ms count=38
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+D/EGL_emulation(16105): app_time_stats: avg=107.13ms min=2.71ms max=1269.83ms count=14
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+D/EGL_emulation(16105): app_time_stats: avg=1933.32ms min=1933.32ms max=1933.32ms count=1
+D/EGL_emulation(16105): app_time_stats: avg=1432.02ms min=1432.02ms max=1432.02ms count=1
+D/InputMethodManager(16105): showSoftInput() view=io.flutter.embedding.android.FlutterView{7af1825 VFE...... .F....ID 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/EGL_emulation(16105): app_time_stats: avg=35194.55ms min=25051.64ms max=45337.47ms count=2
+D/InputConnectionAdaptor(16105): The input method toggled cursor monitoring on
+D/InsetsController(16105): show(ime(), fromIme=true)
+D/EGL_emulation(16105): app_time_stats: avg=77.37ms min=9.21ms max=499.02ms count=19
+D/EGL_emulation(16105): app_time_stats: avg=499.99ms min=499.73ms max=500.26ms count=2
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+D/InputMethodManager(16105): showSoftInput() view=io.flutter.embedding.android.FlutterView{7af1825 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InsetsController(16105): show(ime(), fromIme=true)
+D/EGL_emulation(16105): app_time_stats: avg=333.64ms min=33.46ms max=498.81ms count=3
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+D/EGL_emulation(16105): app_time_stats: avg=300.06ms min=164.22ms max=486.70ms count=4
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (16105): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+D/EGL_emulation(16105): app_time_stats: avg=308.17ms min=161.61ms max=499.79ms count=4
+D/EGL_emulation(16105): app_time_stats: avg=500.01ms min=498.95ms max=500.70ms count=3
+D/EGL_emulation(16105): app_time_stats: avg=499.33ms min=498.61ms max=500.08ms count=3
+D/EGL_emulation(16105): app_time_stats: avg=500.43ms min=499.91ms max=500.94ms count=2
+D/EGL_emulation(16105): app_time_stats: avg=25.99ms min=11.62ms max=335.65ms count=39
+D/EGL_emulation(16105): app_time_stats: avg=494.51ms min=483.59ms max=500.19ms count=3
+D/EGL_emulation(16105): app_time_stats: avg=499.93ms min=498.93ms max=500.93ms count=2
+D/EGL_emulation(16105): app_time_stats: avg=144.20ms min=15.60ms max=499.32ms count=7
+D/InputConnectionAdaptor(16105): The input method toggled cursor monitoring off
+D/EGL_emulation(16105): app_time_stats: avg=689.82ms min=10.67ms max=13795.59ms count=21
+D/EGL_emulation(16105): app_time_stats: avg=32.23ms min=6.61ms max=500.08ms count=34
+D/InputMethodManager(16105): showSoftInput() view=io.flutter.embedding.android.FlutterView{7af1825 VFE...... .F...... 0,0-1080,2148 #1 aid=1073741824} flags=0 reason=SHOW_SOFT_INPUT
+D/InputConnectionAdaptor(16105): The input method toggled cursor monitoring on
+D/InsetsController(16105): show(ime(), fromIme=true)
+D/EGL_emulation(16105): app_time_stats: avg=60.10ms min=8.71ms max=883.27ms count=20
+D/EGL_emulation(16105): app_time_stats: avg=51.39ms min=13.16ms max=500.35ms count=21
+D/EGL_emulation(16105): app_time_stats: avg=499.96ms min=499.18ms max=500.74ms count=2
+D/EGL_emulation(16105): app_time_stats: avg=384.44ms min=155.38ms max=515.36ms count=3
+D/EGL_emulation(16105): app_time_stats: avg=34.46ms min=11.19ms max=484.14ms count=39
+D/EGL_emulation(16105): app_time_stats: avg=507.44ms min=499.57ms max=515.32ms count=2
+D/EGL_emulation(16105): app_time_stats: avg=494.62ms min=485.12ms max=500.14ms count=3
+D/EGL_emulation(16105): app_time_stats: avg=500.02ms min=498.70ms max=501.35ms count=2
+D/EGL_emulation(16105): app_time_stats: avg=507.94ms min=499.69ms max=516.19ms count=2
+D/EGL_emulation(16105): app_time_stats: avg=495.64ms min=483.11ms max=503.26ms count=3
