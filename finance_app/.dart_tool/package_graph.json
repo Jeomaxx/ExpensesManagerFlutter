@@ -168,6 +168,19 @@
       ]
     },
     {
+      "name": "flutter_secure_storage",
+      "version": "9.2.4",
+      "dependencies": [
+        "flutter",
+        "flutter_secure_storage_linux",
+        "flutter_secure_storage_macos",
+        "flutter_secure_storage_platform_interface",
+        "flutter_secure_storage_web",
+        "flutter_secure_storage_windows",
+        "meta"
+      ]
+    },
+    {
       "name": "crypto",
       "version": "3.0.6",
       "dependencies": [
@@ -930,6 +943,52 @@
       ]
     },
     {
+      "name": "flutter_secure_storage_windows",
+      "version": "3.1.2",
+      "dependencies": [
+        "ffi",
+        "flutter",
+        "flutter_secure_storage_platform_interface",
+        "path",
+        "path_provider",
+        "win32"
+      ]
+    },
+    {
+      "name": "flutter_secure_storage_web",
+      "version": "1.2.1",
+      "dependencies": [
+        "flutter",
+        "flutter_secure_storage_platform_interface",
+        "flutter_web_plugins",
+        "js"
+      ]
+    },
+    {
+      "name": "flutter_secure_storage_platform_interface",
+      "version": "1.1.2",
+      "dependencies": [
+        "flutter",
+        "plugin_platform_interface"
+      ]
+    },
+    {
+      "name": "flutter_secure_storage_macos",
+      "version": "3.1.3",
+      "dependencies": [
+        "flutter",
+        "flutter_secure_storage_platform_interface"
+      ]
+    },
+    {
+      "name": "flutter_secure_storage_linux",
+      "version": "1.2.3",
+      "dependencies": [
+        "flutter",
+        "flutter_secure_storage_platform_interface"
+      ]
+    },
+    {
       "name": "typed_data",
       "version": "1.4.0",
       "dependencies": [
@@ -1300,6 +1359,13 @@
       ]
     },
     {
+      "name": "js",
+      "version": "0.6.7",
+      "dependencies": [
+        "meta"
+      ]
+    },
+    {
       "name": "petitparser",
       "version": "7.0.1",
       "dependencies": [
@@ -1402,72 +1468,6 @@
       "dependencies": [
         "flutter",
         "shared_preferences_platform_interface"
-      ]
-    },
-    {
-      "name": "flutter_secure_storage",
-      "version": "9.2.4",
-      "dependencies": [
-        "flutter",
-        "flutter_secure_storage_linux",
-        "flutter_secure_storage_macos",
-        "flutter_secure_storage_platform_interface",
-        "flutter_secure_storage_web",
-        "flutter_secure_storage_windows",
-        "meta"
-      ]
-    },
-    {
-      "name": "flutter_secure_storage_windows",
-      "version": "3.1.2",
-      "dependencies": [
-        "ffi",
-        "flutter",
-        "flutter_secure_storage_platform_interface",
-        "path",
-        "path_provider",
-        "win32"
-      ]
-    },
-    {
-      "name": "flutter_secure_storage_web",
-      "version": "1.2.1",
-      "dependencies": [
-        "flutter",
-        "flutter_secure_storage_platform_interface",
-        "flutter_web_plugins",
-        "js"
-      ]
-    },
-    {
-      "name": "flutter_secure_storage_platform_interface",
-      "version": "1.1.2",
-      "dependencies": [
-        "flutter",
-        "plugin_platform_interface"
-      ]
-    },
-    {
-      "name": "flutter_secure_storage_macos",
-      "version": "3.1.3",
-      "dependencies": [
-        "flutter",
-        "flutter_secure_storage_platform_interface"
-      ]
-    },
-    {
-      "name": "flutter_secure_storage_linux",
-      "version": "1.2.3",
-      "dependencies": [
-        "flutter",
-        "flutter_secure_storage_platform_interface"
-      ]
-    },
-    {
-      "name": "js",
-      "version": "0.6.7",
-      "dependencies": [
-        "meta"
       ]
     }
   ],

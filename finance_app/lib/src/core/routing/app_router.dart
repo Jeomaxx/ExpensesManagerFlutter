@@ -203,7 +203,7 @@ class AppRouter {
       // TODO: Add other routes as pages are implemented
       default:
         return MaterialPageRoute(
-          builder: (_) => Scaffold(
+          builder: (context) => Scaffold(
             appBar: AppBar(title: const Text('Under Development')),
             body: Center(
               child: Column(
