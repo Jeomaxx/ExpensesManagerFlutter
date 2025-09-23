@@ -1,0 +1,163 @@
+flutter run    
+Launching lib\main.dart on sdk gphone64 x86 64 in debug mode...
+Running Gradle task 'assembleDebug'...                             39.6s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...          914ms
+E/flutter (12452): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+E/flutter (12452): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+I/flutter (12452): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(94)] Using the Impeller rendering backend (OpenGLES).
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Localization initialized
+D/HostConnection(12452): createUnique: call
+D/HostConnection(12452): HostConnection::get() New Host Connection established 0x7b681af94510, tid 12495
+D/HostConnection(12452): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+W/OpenGLRenderer(12452): Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+W/OpenGLRenderer(12452): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+D/EGL_emulation(12452): eglCreateContext: 0x7b681af95110: maj 3 min 1 rcv 4
+I/Gralloc4(12452): mapper 4.x is not supported
+D/HostConnection(12452): createUnique: call
+D/HostConnection(12452): HostConnection::get() New Host Connection established 0x7b681af95290, tid 12503
+D/goldfish-address-space(12452): allocate: Ask for block of size 0x100
+D/goldfish-address-space(12452): allocate: ioctl allocate returned offset 0x3f7ffe000 size 0x2000
+D/EGL_emulation(12452): eglMakeCurrent: 0x7b681af95110: ver 3 1 (tinfo 0x7b6a31518180) (first time)
+W/Gralloc4(12452): allocator 4.x is not supported
+D/HostConnection(12452): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/HostConnection(12452): createUnique: call
+D/HostConnection(12452): HostConnection::get() New Host Connection established 0x7b681af94750, tid 12503
+D/HostConnection(12452): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(12452): eglMakeCurrent: 0x7b681af945d0: ver 3 1 (tinfo 0x7b6a31518200) (first time)
+Syncing files to device sdk gphone64 x86 64...                     156ms
+
+Flutter run key commands.
+r Hot reload. 
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:60828/RRle6f3gZfY=/
+I/flutter (12452): Notification permission granted
+I/Choreographer(12452): Skipped 38 frames!  The application may be doing too much work on its main thread.
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:60828/RRle6f3gZfY=/
+I/flutter (12452): Notification service initialized successfully
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Start
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Init state
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Init provider
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Load Localization Delegate
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Load asset from assets/translations
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (12452): [🌎 Easy Localization] [DEBUG] Init provider
+
+══╡ EXCEPTION CAUGHT BY SCHEDULER LIBRARY ╞═════════════════════════════════════════════════════════
+The following assertion was thrown during a scheduler callback:
+ref.listen can only be used within the build method of a ConsumerWidget
+'package:flutter_riverpod/src/consumer.dart':
+Failed assertion: line 600 pos 7: 'debugDoingBuild'
+
+When the exception was thrown, this was the stack:
+#2      ConsumerStatefulElement.listen (package:flutter_riverpod/src/consumer.dart:600:7)
+#3      _SplashPageState._setupAuthListener.<anonymous closure> (package:finance_app/src/features/auth/presentation/pages/splash_page.dart:59:13)
+#4      SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1438:15)
+#5      SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1365:11)
+#6      SchedulerBinding.scheduleWarmUpFrame.<anonymous closure> (package:flutter/src/scheduler/binding.dart:1060:9)
+#7      PlatformDispatcher.scheduleWarmUpFrame.<anonymous closure> (dart:ui/platform_dispatcher.dart:889:16)
+#11     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:193:12)
+(elided 5 frames from class _AssertionError, class _Timer, and dart:async-patch)
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+I/Choreographer(12452): Skipped 32 frames!  The application may be doing too much work on its main thread.
+D/EGL_emulation(12452): app_time_stats: avg=12.00ms min=3.65ms max=126.14ms count=54
+D/EGL_emulation(12452): app_time_stats: avg=5.37ms min=2.94ms max=11.55ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.46ms min=1.74ms max=5.18ms count=60
+D/ProfileInstaller(12452): Installing profile for com.financeapp.finance_app
+D/EGL_emulation(12452): app_time_stats: avg=3.74ms min=2.50ms max=13.62ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.66ms min=1.89ms max=8.77ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.60ms min=2.06ms max=6.34ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.54ms min=1.94ms max=6.99ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.57ms min=1.66ms max=5.30ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=2.93ms min=1.48ms max=4.81ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.75ms min=2.06ms max=11.12ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.36ms min=1.78ms max=6.03ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.35ms min=1.88ms max=6.49ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.45ms min=2.15ms max=5.86ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.79ms min=2.11ms max=6.09ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.63ms min=2.23ms max=5.36ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.64ms min=2.00ms max=6.82ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.51ms min=2.06ms max=6.07ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.51ms min=2.18ms max=5.95ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.56ms min=1.85ms max=6.77ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.44ms min=1.78ms max=5.25ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.55ms min=1.69ms max=6.19ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.81ms min=1.60ms max=6.79ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.46ms min=1.79ms max=5.99ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.58ms min=1.95ms max=5.40ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.62ms min=1.90ms max=6.01ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.62ms min=1.95ms max=5.84ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.54ms min=2.14ms max=5.90ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.40ms min=1.92ms max=6.41ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.26ms min=1.60ms max=4.87ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.31ms min=1.86ms max=7.36ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.40ms min=2.15ms max=8.50ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.37ms min=1.50ms max=9.13ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.34ms min=1.75ms max=5.07ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.31ms min=1.43ms max=6.61ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.55ms min=1.92ms max=5.78ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.56ms min=1.75ms max=6.09ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.52ms min=1.77ms max=5.23ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.67ms min=1.94ms max=7.54ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.37ms min=1.76ms max=5.48ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.59ms min=2.10ms max=7.14ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.30ms min=1.83ms max=5.14ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.72ms min=1.61ms max=7.85ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.43ms min=2.01ms max=4.95ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.45ms min=2.02ms max=6.41ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.24ms min=1.89ms max=6.40ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.35ms min=1.52ms max=18.32ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.26ms min=1.84ms max=4.81ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.39ms min=1.91ms max=7.01ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.37ms min=1.71ms max=5.00ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.40ms min=2.18ms max=6.11ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.21ms min=1.91ms max=4.88ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=3.31ms min=1.95ms max=5.20ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=3.12ms min=2.03ms max=5.20ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=5.21ms min=1.61ms max=20.29ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=13.08ms max=19.83ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=13.96ms max=18.90ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=13.27ms max=19.86ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.59ms min=13.70ms max=19.07ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.64ms min=13.68ms max=19.78ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.62ms min=9.57ms max=21.44ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.64ms min=14.56ms max=18.09ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.62ms min=12.53ms max=19.65ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.64ms min=14.92ms max=19.02ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=13.88ms max=20.23ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.64ms min=15.01ms max=18.26ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=14.11ms max=19.02ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.61ms min=14.56ms max=19.25ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=14.35ms max=18.61ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.60ms min=14.71ms max=18.60ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.64ms min=14.49ms max=18.58ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.60ms min=13.32ms max=20.19ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.65ms min=12.86ms max=20.32ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.62ms min=14.99ms max=18.43ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.65ms min=12.40ms max=20.30ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.62ms min=11.90ms max=19.14ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.61ms min=14.88ms max=19.79ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=14.97ms max=18.53ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=15.23ms max=18.48ms count=60
+D/EGL_emulation(12452): app_time_stats: avg=16.63ms min=15.24ms max=18.51ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.60ms min=14.18ms max=19.58ms count=61
+D/EGL_emulation(12452): app_time_stats: avg=16.64ms min=14.98ms max=18.62ms count=60
+

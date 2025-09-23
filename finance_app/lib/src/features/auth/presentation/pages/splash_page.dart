@@ -53,31 +53,18 @@ class _SplashPageState extends ConsumerState<SplashPage>
   }
 
   void _setupAuthListener() {
-    // Listen to auth state changes immediately - no artificial delay
-    WidgetsBinding.instance.addPostFrameCallback((_) {
+    // Initial timer to navigate after splash display time
+    Future.delayed(const Duration(milliseconds: 1500), () {
       if (mounted) {
-        ref.listen<AuthState>(authProvider, (previous, next) {
-          if (!next.isLoading && mounted) {
-            // Ensure minimum splash display time for UX
-            Future.delayed(const Duration(milliseconds: 1500), () {
-              if (mounted) {
-                _navigateBasedOnAuthState(next);
-              }
-            });
-          }
-        });
-
-        // Check current state immediately in case auth is already resolved
-        final currentState = ref.read(authProvider);
-        if (!currentState.isLoading) {
-          Future.delayed(const Duration(milliseconds: 1500), () {
-            if (mounted) {
-              _navigateBasedOnAuthState(currentState);
-            }
-          });
-        }
+        _checkAuthAndNavigate();
       }
     });
+  }
+
+  void _checkAuthAndNavigate() {
+    // Check current auth state and navigate accordingly
+    final currentState = ref.read(authProvider);
+    _navigateBasedOnAuthState(currentState);
   }
 
   void _navigateBasedOnAuthState(AuthState authState) {
@@ -99,6 +86,18 @@ class _SplashPageState extends ConsumerState<SplashPage>
 
   @override
   Widget build(BuildContext context) {
+    // Listen to auth state changes properly within build method
+    ref.listen<AuthState>(authProvider, (previous, next) {
+      if (!next.isLoading && mounted && !_hasNavigated) {
+        // Ensure minimum splash display time for UX
+        Future.delayed(const Duration(milliseconds: 500), () {
+          if (mounted && !_hasNavigated) {
+            _navigateBasedOnAuthState(next);
+          }
+        });
+      }
+    });
+
     return Scaffold(
       body: Container(
         decoration: const BoxDecoration(
