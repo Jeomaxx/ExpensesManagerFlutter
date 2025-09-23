@@ -375,12 +375,27 @@ final userAccountsProvider = FutureProvider<List<Account>>((ref) async {
 });
 
 // Get categories for dropdowns - default categories are created during auth flow
+// with fallback to ensure defaults exist
 final userCategoriesProvider = FutureProvider<List<Category>>((ref) async {
   final authState = ref.watch(authProvider);
   final categoryRepo = ref.watch(categoryRepositoryProvider);
   
   if (authState.user != null) {
-    return await categoryRepo.getCategoriesByUserId(authState.user!.id);
+    final categories = await categoryRepo.getCategoriesByUserId(authState.user!.id);
+    
+    // Fallback: If no categories exist, ensure defaults and re-fetch
+    if (categories.isEmpty) {
+      try {
+        await ref.read(defaultDataServiceProvider).createDefaultCategories(authState.user!.id);
+        // Re-fetch after creating defaults
+        return await categoryRepo.getCategoriesByUserId(authState.user!.id);
+      } catch (e) {
+        print('Failed to create default categories in fallback: $e');
+        return categories; // Return empty list if fallback fails
+      }
+    }
+    
+    return categories;
   }
   return [];
 });
