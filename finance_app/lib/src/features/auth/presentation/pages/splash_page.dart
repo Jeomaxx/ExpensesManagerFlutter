@@ -141,7 +141,7 @@ class _SplashPageState extends ConsumerState<SplashPage>
                       
                       // App Name
                       Text(
-                        'finance_app'.tr(),
+                        'Finance App',
                         style: Theme.of(context).textTheme.displayMedium?.copyWith(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -152,7 +152,7 @@ class _SplashPageState extends ConsumerState<SplashPage>
                       
                       // App Tagline
                       Text(
-                        'manage_your_finances_smartly'.tr(),
+                        'Manage Your Finances Smartly',
                         style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                           color: Colors.white.withOpacity(0.9),
                         ),
