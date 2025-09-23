@@ -1,4 +1,4 @@
-modules = ["flutter", "dart-3.8"]
+modules = ["web", "dart-3.8"]
 
 [nix]
 channel = "stable-25_05"
@@ -38,6 +38,10 @@ externalPort = 80
 [[ports]]
 localPort = 33245
 externalPort = 3000
+
+[[ports]]
+localPort = 35245
+externalPort = 3002
 
 [[ports]]
 localPort = 38567
