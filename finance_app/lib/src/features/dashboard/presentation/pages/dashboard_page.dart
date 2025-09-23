@@ -127,7 +127,7 @@ class DashboardPage extends ConsumerWidget {
             const SizedBox(height: 16),
             Text(
               CurrencyFormatter.format(
-                dashboardState.totalBalance ?? 0.0,
+                dashboardState.currentBalance ?? 0.0,
                 context: context,
               ),
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -336,7 +336,7 @@ class DashboardPage extends ConsumerWidget {
   }
 
   Widget _buildTransactionItem(BuildContext context, dynamic transaction) {
-    final isExpense = transaction.type == 'expense';
+    final isExpense = transaction.type == TransactionType.expense;
     final color = isExpense ? Colors.red : Colors.green;
     final icon = isExpense ? Icons.trending_down : Icons.trending_up;
     
@@ -373,8 +373,7 @@ class DashboardPage extends ConsumerWidget {
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 16),
-            if (dashboardState.monthlyData == null || 
-                dashboardState.monthlyData.isEmpty)
+            if (dashboardState.expensesByCategory.isEmpty)
               Center(
                 child: Padding(
                   padding: const EdgeInsets.all(32),
