@@ -1,44 +1,25 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:easy_localization/easy_localization.dart';
-// import 'package:firebase_core/firebase_core.dart'; // Temporarily disabled for Replit compatibility
 
 import 'src/app.dart';
-import 'src/core/services/database_service.dart';
 import 'src/core/services/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize EasyLocalization
-  await EasyLocalization.ensureInitialized();
-  
-  // Firebase temporarily disabled for Replit compatibility
-  bool firebaseInitialized = false;
-  print('Firebase features temporarily disabled - app running in local mode');
-  
-  // Initialize local database
-  await DatabaseService.instance.database;
-  
-  // Initialize notifications (only if Firebase is available)
-  try {
-    await NotificationService.instance.initialize(firebaseAvailable: firebaseInitialized);
-  } catch (e) {
-    print('Notification service initialization failed: $e');
+  // Initialize notification service only on supported platforms
+  if (!kIsWeb) {
+    try {
+      await NotificationService().initialize();
+    } catch (e) {
+      debugPrint('Notification service initialization failed: $e');
+    }
   }
   
   runApp(
-    EasyLocalization(
-      supportedLocales: const [
-        Locale('ar', 'SA'), // Arabic
-        Locale('en', 'US'), // English
-      ],
-      path: 'assets/translations',
-      fallbackLocale: const Locale('ar', 'SA'),
-      child: const ProviderScope(
-        child: FinanceApp(),
-      ),
+    const ProviderScope(
+      child: FinanceApp(),
     ),
   );
 }

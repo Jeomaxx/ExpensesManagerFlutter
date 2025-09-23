@@ -92,12 +92,6 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "charcode",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/charcode-1.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "checked_yaml",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/checked_yaml-2.0.4",
       "packageUri": "lib/",
@@ -140,14 +134,8 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "csslib",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/csslib-1.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.1"
-    },
-    {
       "name": "csv",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/csv-5.1.1",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/csv-6.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -170,6 +158,18 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "device_info_plus",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/device_info_plus-10.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "device_info_plus_platform_interface",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "dio",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/dio-5.9.0",
       "packageUri": "lib/",
@@ -180,18 +180,6 @@
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/dio_web_adapter-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
-    },
-    {
-      "name": "easy_localization",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/easy_localization-3.0.8",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "easy_logger",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/easy_logger-0.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "equatable",
@@ -219,31 +207,7 @@
     },
     {
       "name": "file_picker",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/file_picker-6.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
-      "name": "file_selector_linux",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "file_selector_macos",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+4",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
-      "name": "file_selector_platform_interface",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/file_selector_platform_interface-2.6.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "file_selector_windows",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -255,9 +219,9 @@
     },
     {
       "name": "fl_chart",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/fl_chart-0.65.0",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/fl_chart-0.68.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "flutter",
@@ -267,13 +231,13 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_lints-5.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.5"
     },
     {
       "name": "flutter_local_notifications",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_local_notifications-16.3.3",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_local_notifications-17.2.4",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -308,46 +272,10 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "flutter_secure_storage",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage-9.2.4",
+      "name": "flutter_svg",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_svg-2.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "flutter_secure_storage_linux",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_linux-1.2.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "flutter_secure_storage_macos",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_macos-3.1.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "flutter_secure_storage_platform_interface",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_platform_interface-1.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "flutter_secure_storage_web",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_web-1.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "flutter_secure_storage_windows",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "flutter_staggered_grid_view",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/flutter_staggered_grid_view-0.7.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.7"
     },
     {
       "name": "flutter_test",
@@ -374,112 +302,16 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "google_generative_ai",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_generative_ai-0.2.3",
+      "name": "go_router",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/go_router-14.8.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "google_ml_kit",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_ml_kit-0.16.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_barcode_scanning",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_barcode_scanning-0.10.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_commons",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.6.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_digital_ink_recognition",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_digital_ink_recognition-0.10.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_entity_extraction",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_entity_extraction-0.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_face_detection",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_face_detection-0.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_face_mesh_detection",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_face_mesh_detection-0.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_image_labeling",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_image_labeling-0.10.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_language_id",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_language_id-0.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_object_detection",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_object_detection-0.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_pose_detection",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_pose_detection-0.10.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_selfie_segmentation",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_selfie_segmentation-0.6.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_smart_reply",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_smart_reply-0.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_text_recognition",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
-    },
-    {
-      "name": "google_mlkit_translation",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/google_mlkit_translation-0.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.16"
+      "languageVersion": "3.4"
     },
     {
       "name": "graphs",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/graphs-2.3.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
-    },
-    {
-      "name": "html",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/html-0.15.6",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
     },
     {
       "name": "http",
@@ -506,54 +338,6 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "image_picker",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker-1.2.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
-      "name": "image_picker_android",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_android-0.8.13+1",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
-      "name": "image_picker_for_web",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_for_web-3.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
-      "name": "image_picker_ios",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.13",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
-      "name": "image_picker_linux",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
-      "name": "image_picker_macos",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
-      "name": "image_picker_platform_interface",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_platform_interface-2.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
-      "name": "image_picker_windows",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.6"
-    },
-    {
       "name": "intl",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/intl-0.20.2",
       "packageUri": "lib/",
@@ -566,16 +350,16 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "js",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/js-0.6.7",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
       "name": "json_annotation",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/json_annotation-4.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "json_serializable",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/json_serializable-6.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
     },
     {
       "name": "leak_tracker",
@@ -597,39 +381,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/lints-3.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "local_auth",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/local_auth-2.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "local_auth_android",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/local_auth_android-1.0.52",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
-      "name": "local_auth_darwin",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/local_auth_darwin-1.6.0",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/lints-5.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.6"
-    },
-    {
-      "name": "local_auth_platform_interface",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/local_auth_platform_interface-1.0.10",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "local_auth_windows",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/local_auth_windows-1.0.11",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
     },
     {
       "name": "logging",
@@ -662,16 +416,22 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "mockito",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/mockito-5.5.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
       "name": "package_config",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/package_config-2.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "package_info_plus",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/package_info_plus-8.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "package_info_plus_platform_interface",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-3.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "path",
@@ -726,12 +486,6 @@
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/pdf-3.11.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
-    },
-    {
-      "name": "pedantic",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/pedantic-1.11.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "permission_handler",
@@ -824,48 +578,6 @@
       "languageVersion": "2.17"
     },
     {
-      "name": "shared_preferences",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3",
-      "packageUri": "lib/",
-      "languageVersion": "3.5"
-    },
-    {
-      "name": "shared_preferences_android",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.12",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
-      "name": "shared_preferences_foundation",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.5.4",
-      "packageUri": "lib/",
-      "languageVersion": "3.4"
-    },
-    {
-      "name": "shared_preferences_linux",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "shared_preferences_platform_interface",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_platform_interface-2.4.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "shared_preferences_web",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_web-2.4.3",
-      "packageUri": "lib/",
-      "languageVersion": "3.4"
-    },
-    {
-      "name": "shared_preferences_windows",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shared_preferences_windows-2.4.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
       "name": "shelf",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/shelf-1.4.2",
       "packageUri": "lib/",
@@ -890,28 +602,22 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "source_helper",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/source_helper-1.3.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "source_span",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/source_span-1.10.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
-      "name": "speech_to_text",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/speech_to_text-6.6.0",
+      "name": "sprintf",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/sprintf-7.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "speech_to_text_macos",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/speech_to_text_macos-1.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "speech_to_text_platform_interface",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/speech_to_text_platform_interface-2.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "sqflite",
@@ -932,6 +638,12 @@
       "languageVersion": "3.8"
     },
     {
+      "name": "sqflite_common_ffi",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/sqflite_common_ffi-2.3.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "sqflite_darwin",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.2",
       "packageUri": "lib/",
@@ -940,6 +652,12 @@
     {
       "name": "sqflite_platform_interface",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/sqflite_platform_interface-2.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "sqlite3",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/sqlite3-2.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -974,6 +692,18 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "syncfusion_flutter_charts",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/syncfusion_flutter_charts-31.1.19",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
+      "name": "syncfusion_flutter_core",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/syncfusion_flutter_core-31.1.19",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "synchronized",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/synchronized-3.4.0",
       "packageUri": "lib/",
@@ -1004,16 +734,28 @@
       "languageVersion": "3.5"
     },
     {
-      "name": "universal_html",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/universal_html-2.2.4",
+      "name": "uuid",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/uuid-4.5.1",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.0"
     },
     {
-      "name": "universal_io",
-      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/universal_io-2.2.2",
+      "name": "vector_graphics",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/vector_graphics-1.1.19",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.6"
+    },
+    {
+      "name": "vector_graphics_codec",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/vector_graphics_codec-1.1.13",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "vector_graphics_compiler",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/vector_graphics_compiler-1.1.19",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
     },
     {
       "name": "vector_math",
@@ -1058,6 +800,12 @@
       "languageVersion": "3.8"
     },
     {
+      "name": "win32_registry",
+      "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/win32_registry-1.1.5",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "xdg_directories",
       "rootUri": "file:///home/runner/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0",
       "packageUri": "lib/",
@@ -1079,7 +827,7 @@
       "name": "finance_app",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.8"
     }
   ],
   "generator": "pub",

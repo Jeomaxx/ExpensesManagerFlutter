@@ -1,93 +1,92 @@
 name: finance_app
-description: A personal finance management Flutter application with Arabic RTL support and AI integration.
+description: A comprehensive Flutter finance management application
 publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.1.0 <4.0.0'
+  sdk: ^3.8.0
+  flutter: ">=3.24.0"
 
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  
-  # Core dependencies
-  cupertino_icons: ^1.0.2
-  
-  # State management
-  flutter_riverpod: ^2.4.9
-  
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod: ^2.5.1
+
+  # Navigation
+  go_router: ^14.2.3
+
   # Database
-  sqflite: ^2.3.0
-  path: ^1.8.3
-  
-  # Firebase - temporarily disabled for Replit compatibility
-  # firebase_core: ^2.24.2
-  # firebase_auth: ^4.15.3
-  # cloud_firestore: ^4.13.6
-  # firebase_messaging: ^14.7.10
-  
-  # UI & Charts
-  fl_chart: ^0.65.0
-  flutter_staggered_grid_view: ^0.7.0
-  
-  # Secure storage
-  flutter_secure_storage: ^9.0.0
-  
-  # Networking
-  http: ^1.1.0
-  dio: ^5.4.0
-  
+  sqflite: ^2.3.3
+  sqflite_common_ffi: ^2.3.3
+  path: ^1.9.0
+
   # Utilities
-  intl: ^0.20.2
-  shared_preferences: ^2.2.2
-  image_picker: ^1.0.4
-  file_picker: ^6.1.1
-  permission_handler: ^11.1.0
-  
-  # Notifications
-  flutter_local_notifications: ^16.3.0
-  
-  # Web compatibility
-  universal_html: ^2.2.4
-  js: ^0.6.7
-  
-  # AI & ML
-  google_generative_ai: ^0.2.2
-  google_ml_kit: ^0.16.0
-  speech_to_text: ^6.6.0
-  
-  # PDF & CSV
-  pdf: ^3.10.7
-  csv: ^5.0.2
-  
-  # Localization
-  easy_localization: ^3.0.3
-  
-  # Biometric
-  local_auth: ^2.1.7
+  intl: ^0.20.0
+  json_annotation: ^4.9.0
+  equatable: ^2.0.5
+  uuid: ^4.4.2
+
+  # UI Components
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.10+1
+
+  # Charts and Visualization
+  fl_chart: ^0.68.0
+  syncfusion_flutter_charts: ^31.1.19
+
+  # HTTP and networking
+  http: ^1.2.2
+  dio: ^5.7.0
+
+  # File operations
+  file_picker: ^8.1.2
+  path_provider: ^2.1.4
+
+  # Permissions and notifications
+  permission_handler: ^11.3.1
+  flutter_local_notifications: ^17.2.3
+
+  # Export functionality
+  pdf: ^3.11.1
+  csv: ^6.0.0
+
+  # Encryption
+  crypto: ^3.0.5
+
+  # Device info
+  device_info_plus: ^10.1.2
+  package_info_plus: ^8.0.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
-  mockito: ^5.4.4
-  build_runner: ^2.4.7
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.12
+  json_serializable: ^6.8.0
 
 flutter:
   uses-material-design: true
   
+  generate: true
+
   assets:
-    - assets/
     - assets/images/
     - assets/icons/
-    - assets/translations/
-  
-  # fonts:
-  #   - family: Tajawal
-  #     fonts:
-  #       - asset: assets/fonts/Tajawal-Regular.ttf
-  #       - asset: assets/fonts/Tajawal-Bold.ttf
-  #         weight: 700
+    - assets/
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
