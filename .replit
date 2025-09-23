@@ -49,5 +49,5 @@ externalPort = 3001
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["flutter", "run", "-d", "web-server", "--web-port", "5000", "--web-hostname", "0.0.0.0", "--target=lib/main_simple.dart", "--release"]
+run = ["python3", "-m", "http.server", "5000", "--directory", "finance_app/build/web"]
 build = ["flutter", "build", "web", "--release", "--target=lib/main_simple.dart"]
