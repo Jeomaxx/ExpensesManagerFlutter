@@ -15,10 +15,20 @@ class DefaultDataService {
   final CategoryRepository _categoryRepository = CategoryRepository.instance;
 
   Future<void> createDefaultCategories(String userId) async {
-    final defaultCategories = _getDefaultCategories(userId);
+    // Check if categories already exist for this user
+    final existingCategories = await _categoryRepository.getCategoriesByUserId(userId);
     
-    for (final category in defaultCategories) {
-      await _categoryRepository.createCategory(category);
+    // Only create default categories if none exist
+    if (existingCategories.isEmpty) {
+      final defaultCategories = _getDefaultCategories(userId);
+      
+      for (final category in defaultCategories) {
+        try {
+          await _categoryRepository.createCategory(category);
+        } catch (e) {
+          print('Failed to create category ${category.name}: $e');
+        }
+      }
     }
   }
 
@@ -323,6 +333,18 @@ class DefaultDataService {
         lastModified: now,
       ),
       
+      // الاشتراكات والخدمات الرقمية
+      Category(
+        id: '${userId}_cat_subscriptions',
+        userId: userId,
+        name: 'اشتراكات وخدمات رقمية',
+        iconName: 'subscription',
+        color: const Color(0xFF673AB7),
+        budgetAmount: 150.0,
+        createdAt: now,
+        lastModified: now,
+      ),
+      
       // أخرى
       Category(
         id: '${userId}_cat_other',
@@ -383,69 +405,97 @@ class DefaultDataService {
         id: '${userId}_txn_salary_${now.millisecondsSinceEpoch}',
         userId: userId,
         accountId: defaultAccountId,
-        categoryId: categories.firstWhere((c) => c.name.contains('Salary'), orElse: () => categories.first).id,
+        categoryId: categories.firstWhere((c) => c.name == 'راتب شهري', orElse: () => categories.first).id,
         amount: 8500.0,
         type: TransactionType.income,
-        notes: 'Monthly salary',
+        notes: 'راتب شهر ${now.month}',
         date: DateTime(now.year, now.month, 1),
-        tags: ['salary', 'income'],
+        tags: ['راتب', 'دخل'],
+        createdAt: now,
+        lastModified: now,
+      ),
+      
+      Transaction(
+        id: '${userId}_txn_freelance_${now.millisecondsSinceEpoch + 1}',
+        userId: userId,
+        accountId: defaultAccountId,
+        categoryId: categories.firstWhere((c) => c.name == 'أعمال حرة', orElse: () => categories.first).id,
+        amount: 1200.0,
+        type: TransactionType.income,
+        notes: 'مشروع تطوير موقع',
+        date: now.subtract(const Duration(days: 5)),
+        tags: ['أعمال حرة', 'دخل'],
         createdAt: now,
         lastModified: now,
       ),
       
       // Expense transactions
       Transaction(
-        id: '${userId}_txn_grocery_${now.millisecondsSinceEpoch + 1}',
+        id: '${userId}_txn_grocery_${now.millisecondsSinceEpoch + 2}',
         userId: userId,
         accountId: defaultAccountId,
-        categoryId: categories.firstWhere((c) => c.name.contains('Food'), orElse: () => categories.first).id,
+        categoryId: categories.firstWhere((c) => c.name == 'بقالة ومستلزمات', orElse: () => categories.first).id,
         amount: 250.0,
         type: TransactionType.expense,
-        notes: 'Weekly groceries',
+        notes: 'تسوق أسبوعي',
         date: now.subtract(const Duration(days: 1)),
-        tags: ['grocery', 'food'],
+        tags: ['بقالة', 'طعام'],
         createdAt: now,
         lastModified: now,
       ),
       
       Transaction(
-        id: '${userId}_txn_gas_${now.millisecondsSinceEpoch + 2}',
+        id: '${userId}_txn_gas_${now.millisecondsSinceEpoch + 3}',
         userId: userId,
         accountId: defaultAccountId,
-        categoryId: categories.firstWhere((c) => c.name.contains('Transportation'), orElse: () => categories.first).id,
+        categoryId: categories.firstWhere((c) => c.name == 'وقود', orElse: () => categories.first).id,
         amount: 120.0,
         type: TransactionType.expense,
-        notes: 'Gas station fill-up',
+        notes: 'تعبئة وقود',
         date: now.subtract(const Duration(days: 2)),
-        tags: ['gas', 'transport'],
+        tags: ['وقود', 'مواصلات'],
         createdAt: now,
         lastModified: now,
       ),
       
       Transaction(
-        id: '${userId}_txn_coffee_${now.millisecondsSinceEpoch + 3}',
+        id: '${userId}_txn_restaurant_${now.millisecondsSinceEpoch + 4}',
         userId: userId,
         accountId: defaultAccountId,
-        categoryId: categories.firstWhere((c) => c.name.contains('Food'), orElse: () => categories.first).id,
-        amount: 25.0,
+        categoryId: categories.firstWhere((c) => c.name == 'طعام ومشروبات', orElse: () => categories.first).id,
+        amount: 85.0,
         type: TransactionType.expense,
-        notes: 'Coffee shop',
+        notes: 'عشاء في مطعم',
         date: now.subtract(const Duration(days: 3)),
-        tags: ['coffee', 'food'],
+        tags: ['مطعم', 'طعام'],
         createdAt: now,
         lastModified: now,
       ),
       
       Transaction(
-        id: '${userId}_txn_utilities_${now.millisecondsSinceEpoch + 4}',
+        id: '${userId}_txn_electricity_${now.millisecondsSinceEpoch + 5}',
         userId: userId,
         accountId: defaultAccountId,
-        categoryId: categories.firstWhere((c) => c.name.contains('Utilities'), orElse: () => categories.first).id,
+        categoryId: categories.firstWhere((c) => c.name == 'كهرباء ومياه', orElse: () => categories.first).id,
         amount: 450.0,
         type: TransactionType.expense,
-        notes: 'Monthly electricity bill',
+        notes: 'فاتورة الكهرباء والمياه',
         date: DateTime(now.year, now.month, 5),
-        tags: ['utilities', 'bills'],
+        tags: ['فواتير', 'خدمات'],
+        createdAt: now,
+        lastModified: now,
+      ),
+      
+      Transaction(
+        id: '${userId}_txn_pharmacy_${now.millisecondsSinceEpoch + 6}',
+        userId: userId,
+        accountId: defaultAccountId,
+        categoryId: categories.firstWhere((c) => c.name == 'أدوية وصيدلية', orElse: () => categories.first).id,
+        amount: 75.0,
+        type: TransactionType.expense,
+        notes: 'أدوية وفيتامينات',
+        date: now.subtract(const Duration(days: 4)),
+        tags: ['صيدلية', 'صحة'],
         createdAt: now,
         lastModified: now,
       ),
