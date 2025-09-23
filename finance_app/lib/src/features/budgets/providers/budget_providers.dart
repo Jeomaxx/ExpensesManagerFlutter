@@ -279,8 +279,9 @@ class BudgetListState {
 // Budget List Notifier
 class BudgetListNotifier extends StateNotifier<BudgetListState> {
   final BudgetRepository _budgetRepository;
+  final Ref _ref;
 
-  BudgetListNotifier(this._budgetRepository) : super(const BudgetListState());
+  BudgetListNotifier(this._budgetRepository, this._ref) : super(const BudgetListState());
 
   Future<void> loadBudgets(String userId) async {
     state = state.copyWith(isLoading: true, error: null);
@@ -342,7 +343,7 @@ class BudgetListNotifier extends StateNotifier<BudgetListState> {
       await _budgetRepository.updateBudget(updatedBudget);
 
       // Update local state - reload to get fresh spending data
-      final authState = ref.read(authProvider);
+      final authState = _ref.read(authProvider);
       if (authState.user != null) {
         await loadBudgets(authState.user!.id);
       }
@@ -369,7 +370,7 @@ final budgetFormProvider = StateNotifierProvider<BudgetFormNotifier, BudgetFormS
 
 final budgetListProvider = StateNotifierProvider<BudgetListNotifier, BudgetListState>((ref) {
   final budgetRepo = ref.watch(budgetRepositoryProvider);
-  return BudgetListNotifier(budgetRepo);
+  return BudgetListNotifier(budgetRepo, ref);
 });
 
 // Auto-load budgets when user changes

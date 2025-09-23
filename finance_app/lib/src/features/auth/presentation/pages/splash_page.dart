@@ -85,7 +85,7 @@ class _SplashPageState extends ConsumerState<SplashPage>
     _hasNavigated = true;
     
     if (authState.isAuthenticated) {
-      Navigator.of(context).pushReplacementNamed(AppRouter.dashboard);
+      Navigator.of(context).pushReplacementNamed(AppRouter.home);
     } else {
       Navigator.of(context).pushReplacementNamed(AppRouter.onboarding);
     }

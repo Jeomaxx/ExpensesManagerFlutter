@@ -62,13 +62,13 @@ class AppTheme {
       ),
 
       // Card Theme
-      cardTheme: CardTheme(
+      cardTheme: const CardThemeData(
         color: surfaceColor,
         elevation: 2,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
-        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       ),
 
       // Button Themes
@@ -254,7 +254,7 @@ class AppTheme {
         color: const Color(0xFF2D3748),
         elevation: 2,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.all(Radius.circular(12)),
         ),
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       ),

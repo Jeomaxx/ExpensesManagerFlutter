@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/utils/currency_formatter.dart';
 import '../../../../core/utils/date_formatter.dart';
-import '../../../auth/providers/auth_provider.dart';
+import '../../../../core/providers/auth_provider.dart';
+import '../../../../core/models/loan.dart';
 import '../../providers/loan_providers.dart';
 
 class LoanListPage extends ConsumerWidget {

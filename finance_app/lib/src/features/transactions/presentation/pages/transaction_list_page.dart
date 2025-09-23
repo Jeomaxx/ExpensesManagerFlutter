@@ -186,14 +186,12 @@ class TransactionListItem extends ConsumerWidget {
   }
 
   Future<String> _getCategoryName(WidgetRef ref, String categoryId) async {
-    final categoryAsync = ref.read(categoryByIdProvider(categoryId));
-    final category = await categoryAsync.future;
+    final category = await ref.read(categoryByIdProvider(categoryId).future);
     return category?.name ?? 'Unknown Category';
   }
 
   Future<String> _getAccountName(WidgetRef ref, String accountId) async {
-    final accountAsync = ref.read(accountByIdProvider(accountId));
-    final account = await accountAsync.future;
+    final account = await ref.read(accountByIdProvider(accountId).future);
     return account?.name ?? 'Unknown Account';
   }
 }

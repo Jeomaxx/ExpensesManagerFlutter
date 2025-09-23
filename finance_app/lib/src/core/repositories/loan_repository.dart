@@ -142,12 +142,20 @@ class LoanRepository {
 
   Future<double> getTotalOutstandingBalance(String userId) async {
     final loans = await getLoansByUserId(userId);
-    return loans.where((loan) => loan.isActive).fold(0.0, (sum, loan) => sum + loan.remainingBalance);
+    double total = 0.0;
+    for (final loan in loans.where((loan) => loan.isActive)) {
+      total += loan.remainingBalance;
+    }
+    return total;
   }
 
   Future<double> getMonthlyPaymentTotal(String userId) async {
     final loans = await getLoansByUserId(userId);
-    return loans.where((loan) => loan.isActive).fold(0.0, (sum, loan) => sum + loan.monthlyPayment);
+    double total = 0.0;
+    for (final loan in loans.where((loan) => loan.isActive)) {
+      total += loan.monthlyPayment;
+    }
+    return total;
   }
 
   Future<void> _createLoanPayment(app_models.LoanPayment payment, String loanId) async {

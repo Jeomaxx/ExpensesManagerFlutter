@@ -17,6 +17,11 @@ import '../../features/budgets/presentation/pages/budget_details_page.dart';
 import '../../features/goals/presentation/pages/goal_list_page.dart';
 import '../../features/goals/presentation/pages/add_goal_page.dart';
 import '../../features/goals/presentation/pages/goal_details_page.dart';
+import '../../features/loans/presentation/pages/loan_list_page.dart';
+import '../../features/investments/presentation/pages/investment_list_page.dart';
+import '../../features/reports/presentation/pages/reports_page.dart';
+import '../../features/settings/presentation/pages/settings_page.dart';
+import '../../shared/widgets/app_shell.dart';
 import '../models/transaction.dart';
 import '../models/account.dart';
 import '../models/budget.dart';
@@ -28,6 +33,7 @@ class AppRouter {
   static const String login = '/login';
   static const String register = '/register';
   static const String dashboard = '/dashboard';
+  static const String home = '/home';
   static const String addTransaction = '/add-transaction';
   static const String transactionsList = '/transactions';
   static const String transactionDetails = '/transaction-details';
@@ -75,6 +81,12 @@ class AppRouter {
       case dashboard:
         return MaterialPageRoute(
           builder: (_) => const DashboardPage(),
+          settings: settings,
+        );
+      
+      case home:
+        return MaterialPageRoute(
+          builder: (_) => const AppShell(),
           settings: settings,
         );
       
@@ -161,6 +173,30 @@ class AppRouter {
         final goalId = settings.arguments as String;
         return MaterialPageRoute(
           builder: (_) => GoalDetailsPage(goalId: goalId),
+          settings: settings,
+        );
+      
+      case AppRouter.investments:
+        return MaterialPageRoute(
+          builder: (_) => const InvestmentListPage(),
+          settings: settings,
+        );
+      
+      case AppRouter.loans:
+        return MaterialPageRoute(
+          builder: (_) => const LoanListPage(),
+          settings: settings,
+        );
+      
+      case AppRouter.reports:
+        return MaterialPageRoute(
+          builder: (_) => const ReportsPage(),
+          settings: settings,
+        );
+      
+      case AppRouter.settings:
+        return MaterialPageRoute(
+          builder: (_) => const SettingsPage(),
           settings: settings,
         );
       

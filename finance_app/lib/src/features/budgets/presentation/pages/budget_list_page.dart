@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 import '../../../../core/models/budget.dart';
 import '../../../../core/utils/currency_formatter.dart';
 import '../../../../core/routing/app_router.dart';
+import '../../../../core/providers/auth_provider.dart';
 import '../../providers/budget_providers.dart';
 
 class BudgetListPage extends ConsumerWidget {

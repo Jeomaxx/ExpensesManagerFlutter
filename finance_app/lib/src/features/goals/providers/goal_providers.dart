@@ -225,7 +225,6 @@ class GoalFormNotifier extends StateNotifier<GoalFormState> {
           targetAmount: state.targetAmount,
           targetDate: state.targetDate,
           linkedAccountId: state.linkedAccountId,
-          description: state.description,
           lastModified: DateTime.now(),
         );
         await _goalRepository.updateGoal(updatedGoal);
