@@ -6,6 +6,7 @@ import '../../../core/repositories/transaction_repository.dart';
 import '../../../core/repositories/account_repository.dart';
 import '../../../core/repositories/category_repository.dart';
 import '../../../core/providers/auth_provider.dart';
+import '../../../core/services/default_data_service.dart';
 
 // Simple ID generator using timestamp and random numbers
 String _generateId() {
@@ -337,6 +338,10 @@ final categoryRepositoryProvider = Provider<CategoryRepository>((ref) {
   return CategoryRepository.instance;
 });
 
+final defaultDataServiceProvider = Provider<DefaultDataService>((ref) {
+  return DefaultDataService.instance;
+});
+
 final transactionFormProvider = StateNotifierProvider<TransactionFormNotifier, TransactionFormState>((ref) {
   final transactionRepo = ref.watch(transactionRepositoryProvider);
   final accountRepo = ref.watch(accountRepositoryProvider);
@@ -369,7 +374,7 @@ final userAccountsProvider = FutureProvider<List<Account>>((ref) async {
   return [];
 });
 
-// Get categories for dropdowns
+// Get categories for dropdowns - default categories are created during auth flow
 final userCategoriesProvider = FutureProvider<List<Category>>((ref) async {
   final authState = ref.watch(authProvider);
   final categoryRepo = ref.watch(categoryRepositoryProvider);

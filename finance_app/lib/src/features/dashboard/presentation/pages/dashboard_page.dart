@@ -19,15 +19,29 @@ class DashboardPage extends ConsumerWidget {
     final dashboardState = ref.watch(dashboardProvider);
     final user = authState.user;
 
-    // Auto-load dashboard data when component builds
-    ref.listen<AsyncValue<void>>(dashboardDataProvider, (previous, next) {
-      // Handle any loading errors
-      next.whenOrNull(
-        error: (error, _) => ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error loading dashboard: $error')),
-        ),
-      );
+    // Manually load dashboard data when user is authenticated or state changes
+    ref.listen(authProvider, (previous, next) {
+      if (next.isAuthenticated && next.user != null) {
+        // Check current dashboard state to avoid duplicate loading
+        final currentDashboardState = ref.read(dashboardProvider);
+        if (!currentDashboardState.isLoading) {
+          // Trigger dashboard data loading manually
+          Future.microtask(() {
+            ref.read(dashboardProvider.notifier).loadDashboardData(next.user!.id);
+          });
+        }
+      }
     });
+
+    // Trigger initial load if user is already authenticated
+    if (authState.isAuthenticated && 
+        authState.user != null && 
+        !dashboardState.isLoading && 
+        dashboardState.recentTransactions.isEmpty) {
+      Future.microtask(() {
+        ref.read(dashboardProvider.notifier).loadDashboardData(authState.user!.id);
+      });
+    }
 
     return Scaffold(
       appBar: AppBar(

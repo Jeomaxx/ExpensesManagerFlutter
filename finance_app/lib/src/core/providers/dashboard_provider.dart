@@ -127,12 +127,4 @@ final categoryRepositoryProvider = Provider<CategoryRepository>((ref) {
   return CategoryRepository.instance;
 });
 
-// Auto-load dashboard data when user changes
-final dashboardDataProvider = FutureProvider.autoDispose<void>((ref) async {
-  final authState = ref.watch(authProvider);
-  final dashboardNotifier = ref.read(dashboardProvider.notifier);
-
-  if (authState.isAuthenticated && authState.user != null) {
-    await dashboardNotifier.loadDashboardData(authState.user!.id);
-  }
-});
+// Removed dashboardDataProvider as it's no longer needed - dashboard loading is now handled manually in DashboardPage
