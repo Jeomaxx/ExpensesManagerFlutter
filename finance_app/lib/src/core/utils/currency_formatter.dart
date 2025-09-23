@@ -84,7 +84,7 @@ class CurrencyFormatter {
       final locale = Localizations.localeOf(context);
       return '${locale.languageCode}_${locale.countryCode}';
     }
-    return 'ar_SA'; // Fallback to Arabic Saudi Arabia
+    return 'en_US'; // Fallback to English for consistency with UI
   }
 
   static String getCurrencyName(String currencyCode, String locale) {

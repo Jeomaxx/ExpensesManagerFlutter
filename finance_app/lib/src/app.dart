@@ -28,13 +28,7 @@ class FinanceApp extends ConsumerWidget {
       home: const SplashPage(),
       onGenerateRoute: AppRouter.generateRoute,
       debugShowCheckedModeBanner: false,
-      // Simple builder setup
-      builder: (context, child) {
-        return Directionality(
-          textDirection: TextDirection.ltr,
-          child: child!,
-        );
-      },
+      // RTL support handled automatically by Flutter based on locale
     );
   }
 }
