@@ -50,9 +50,9 @@
         <key>NSCameraUsageDescription</key>
         <string>This app needs camera access to scan receipts and documents for financial tracking.</string>
         <key>NSPhotoLibraryUsageDescription</key>
-        <string>This app needs photo library access to save and access financial documents and receipts.</string>
-        <key>NSLocationWhenInUseUsageDescription</key>
-        <string>This app may use location for location-based transaction tracking and expense categorization.</string>
+        <string>This app needs photo library access to access financial documents and receipts.</string>
+        <key>NSPhotoLibraryAddUsageDescription</key>
+        <string>This app needs permission to save scanned receipts and financial documents to your photo library.</string>
         <key>NSFaceIDUsageDescription</key>
         <string>This app uses Face ID for secure authentication and protecting your financial data.</string>
 </dict>

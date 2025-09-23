@@ -4,11 +4,18 @@
 This Flutter Finance App has been configured for mobile deployment with support for both Android and iOS platforms.
 
 ## Current Status
-- ✅ **Web Version**: Running successfully at port 5000
-- ✅ **Android Platform**: Configured with proper permissions and manifest
-- ✅ **iOS Platform**: Configured with proper Info.plist and permissions
-- ✅ **Build Scripts**: Created for both Android and iOS
+- ✅ **Web Version**: Running successfully at port 5000 (simplified version)
+- ⚠️ **Android Platform**: Platform configured, requires signing setup for production
+- ⚠️ **iOS Platform**: Platform configured, requires macOS/Xcode for production builds
+- ⚠️ **Build Scripts**: Created for both platforms, production-ready with signing guidance
 - ✅ **Deployment Config**: Set up for autoscale web deployment
+
+## ⚠️ Production Readiness Status
+**This is a development/demo setup. Additional steps required for production:**
+- Android: Configure signing certificates and keystore
+- iOS: Configure Apple Developer account and code signing
+- Both: Test on physical devices with release builds
+- Store submission: Follow platform-specific review guidelines
 
 ## App Features
 - Comprehensive finance management
@@ -25,15 +32,14 @@ This Flutter Finance App has been configured for mobile deployment with support 
 ### Android (AndroidManifest.xml)
 - Internet access for data sync
 - Network state monitoring
-- Storage access for receipts/documents
+- Modern media permissions (Android 13+) and backward compatibility (Android 10-12)
 - Camera for receipt scanning
-- Notification permissions
+- Notification permissions (requires runtime request on Android 13+)
 - Biometric authentication
 
 ### iOS (Info.plist)
 - Camera usage for receipt scanning
-- Photo library access for documents
-- Location services for transaction tracking
+- Photo library read/write access for documents
 - Face ID for secure authentication
 
 ## Building for Mobile
