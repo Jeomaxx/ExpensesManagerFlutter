@@ -1,0 +1,435 @@
+Installing build\app\outputs\flutter-apk\app-debug.apk...        2,096ms
+E/flutter (21490): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+E/flutter (21490): [ERROR:flutter/impeller/toolkit/egl/egl.cc(56)] EGL Error: Success (12288) in ../../../flutter/impeller/toolkit/egl/display.cc:161
+I/flutter (21490): [IMPORTANT:flutter/shell/platform/android/android_context_gl_impeller.cc(94)] Using the Impeller rendering backend (OpenGLES).
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Localization initialized
+I/Choreographer(21490): Skipped 134 frames!  The application may be doing too much work on its main thread.
+Syncing files to device sdk gphone64 x86 64...                     105ms
+D/HostConnection(21490): createUnique: call
+D/HostConnection(21490): HostConnection::get() New Host Connection established 0x7b681af948d0, tid 21548
+
+Flutter run key commands.
+r Hot reload.
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+A Dart VM Service on sdk gphone64 x86 64 is available at: http://127.0.0.1:58773/xCJlrpDMj-c=/
+D/HostConnection(21490): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+W/OpenGLRenderer(21490): Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
+W/OpenGLRenderer(21490): Failed to initialize 101010-2 format, error = EGL_SUCCESS
+D/EGL_emulation(21490): eglCreateContext: 0x7b681af93910: maj 3 min 1 rcv 4
+D/EGL_emulation(21490): eglMakeCurrent: 0x7b681af93910: ver 3 1 (tinfo 0x7b6a31518180) (first time)
+I/Gralloc4(21490): mapper 4.x is not supported
+D/HostConnection(21490): createUnique: call
+D/HostConnection(21490): HostConnection::get() New Host Connection established 0x7b681af97990, tid 21649
+D/goldfish-address-space(21490): allocate: Ask for block of size 0x100
+D/goldfish-address-space(21490): allocate: ioctl allocate returned offset 0x3efffe000 size 0x2000
+W/Gralloc4(21490): allocator 4.x is not supported
+D/HostConnection(21490): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/HostConnection(21490): createUnique: call
+D/HostConnection(21490): HostConnection::get() New Host Connection established 0x7b681af972d0, tid 21649
+D/HostConnection(21490): HostComposition ext ANDROID_EMU_CHECKSUM_HELPER_v1 ANDROID_EMU_native_sync_v2 ANDROID_EMU_native_sync_v3 ANDROID_EMU_native_sync_v4 ANDROID_EMU_dma_v1 ANDROID_EMU_direct_mem ANDROID_EMU_host_composition_v1 A
+NDROID_EMU_host_composition_v2 ANDROID_EMU_vulkan ANDROID_EMU_deferred_vulkan_commands ANDROID_EMU_vulkan_null_optional_strings ANDROID_EMU_vulkan_create_resources_with_requirements ANDROID_EMU_YUV_Cache ANDROID_EMU_vulkan_ignored_h
+andles ANDROID_EMU_has_shared_slots_host_memory_allocator ANDROID_EMU_vulkan_free_memory_sync ANDROID_EMU_vulkan_shader_float16_int8 ANDROID_EMU_vulkan_async_queue_submit ANDROID_EMU_vulkan_queue_submit_with_commands ANDROID_EMU_syn
+c_buffer_data ANDROID_EMU_vulkan_async_qsri ANDROID_EMU_read_color_buffer_dma GL_OES_EGL_image_external_essl3 GL_OES_vertex_array_object GL_KHR_texture_compression_astc_ldr ANDROID_EMU_host_side_tracing ANDROID_EMU_gles_max_version_3_1
+D/EGL_emulation(21490): eglMakeCurrent: 0x7b681af94450: ver 3 1 (tinfo 0x7b6a31518200) (first time)
+The Flutter DevTools debugger and profiler on sdk gphone64 x86 64 is available at: http://127.0.0.1:9100?uri=http://127.0.0.1:58773/xCJlrpDMj-c=/
+I/flutter (21490): Notification permission granted
+I/Choreographer(21490): Skipped 36 frames!  The application may be doing too much work on its main thread.
+I/flutter (21490): Notification service initialized successfully
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Start
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Init state
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Init provider
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Load Localization Delegate
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Load asset from assets/translations
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Build
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Init Localization Delegate
+I/flutter (21490): [🌎 Easy Localization] [DEBUG] Init provider
+I/Choreographer(21490): Skipped 49 frames!  The application may be doing too much work on its main thread.
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [skip] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [continue] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [onboarding_title_1] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [onboarding_subtitle_1] not found
+D/EGL_emulation(21490): app_time_stats: avg=41.06ms min=5.50ms max=244.58ms count=27
+D/ProfileInstaller(21490): Installing profile for com.financeapp.finance_app
+D/EGL_emulation(21490): app_time_stats: avg=24560.63ms min=10.81ms max=98073.88ms count=4
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+D/EGL_emulation(21490): app_time_stats: avg=628.98ms min=10.84ms max=2107.10ms count=4
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [welcome] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_in_to_continue] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [email] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [password] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_in] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [forgot_password] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [or] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [sign_up] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [continue_as_guest] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+D/EGL_emulation(21490): app_time_stats: avg=164.38ms min=3.09ms max=3763.16ms count=28
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+
+══╡ EXCEPTION CAUGHT BY RENDERING LIBRARY ╞═════════════════════════════════════════════════════════
+The following assertion was thrown during performLayout():
+RenderFlex children have non-zero flex but incoming width constraints are unbounded.
+When a row is in a parent that does not provide a finite width constraint, for example if it is in a
+horizontal scrollable, it will try to shrink-wrap its children along the horizontal axis. Setting a
+flex on a child (e.g. using Expanded) indicates that the child is to expand to fill the remaining
+space in the horizontal direction.
+These two directives are mutually exclusive. If a parent is to shrink-wrap its child, the child
+cannot simultaneously expand to fit its parent.
+Consider setting mainAxisSize to MainAxisSize.min and using FlexFit.loose fits for the flexible
+children (using Flexible rather than Expanded). This will allow the flexible children to size
+themselves to less than the infinite remaining space they would otherwise be forced to take, and
+then will cause the RenderFlex to shrink-wrap the children rather than expanding to fit the maximum
+constraints provided by the parent.
+If this message did not help you determine the problem, consider using debugDumpRenderTree():
+  https://flutter.dev/to/debug-render-layer
+  https://api.flutter.dev/flutter/rendering/debugDumpRenderTree.html
+The affected RenderFlex is:
+  RenderFlex#8729e relayoutBoundary=up7 NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE(creator: Row ← Align ← ConstrainedBox ← Semantics ← DropdownMenuItem<String> ← IgnorePointer ← _Visibility ← _VisibilityScope ←
+  Visibility ← _RawIndexedStack ← IndexedStack ← Row ← ⋯, parentData: offset=Offset(0.0, 0.0) (can use size), constraints: BoxConstraints(0.0<=w<=Infinity, 0.0<=h<=24.0), size: MISSING, direction: horizontal, mainAxisAlignment:     
+  start, mainAxisSize: max, crossAxisAlignment: center, textDirection: rtl, verticalDirection: down, spacing: 0.0)
+The creator information is set to:
+  Row ← Align ← ConstrainedBox ← Semantics ← DropdownMenuItem<String> ← IgnorePointer ← _Visibility
+  ← _VisibilityScope ← Visibility ← _RawIndexedStack ← IndexedStack ← Row ← ⋯
+The nearest ancestor providing an unbounded width constraint is: RenderFlex#3d1fb NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE:
+  creator: Row ← Padding ← SizedBox ← DefaultTextStyle ← _Decorator ← InputDecorator ← Listener ←
+    _GestureSemantics ← RawGestureDetector ← GestureDetector ← MouseRegion ← Semantics ← ⋯
+  parentData: offset=Offset(0.0, 0.0) (can use size)
+  constraints: BoxConstraints(w=292.7, h=24.0)
+  size: MISSING
+  direction: horizontal
+  mainAxisAlignment: spaceBetween
+  mainAxisSize: min
+  crossAxisAlignment: center
+  textDirection: rtl
+  verticalDirection: down
+  spacing: 0.0
+See also: https://flutter.dev/unbounded-constraints
+If none of the above helps enough to fix this problem, please don't hesitate to file a bug:
+  https://github.com/flutter/flutter/issues/new?template=02_bug.yml
+
+The relevant error-causing widget was:
+  Row
+  Row:file:///C:/flutter/finance_app/lib/src/features/transactions/presentation/pages/add_transaction_page.dart:252:22
+
+When the exception was thrown, this was the stack:
+#0      RenderFlex.performLayout.<anonymous closure> (package:flutter/src/rendering/flex.dart:1250:9)
+#1      RenderFlex.performLayout (package:flutter/src/rendering/flex.dart:1253:6)
+#2      RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#3      RenderPositionedBox.performLayout (package:flutter/src/rendering/shifted_box.dart:465:14)
+#4      RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#5      RenderConstrainedBox.performLayout (package:flutter/src/rendering/proxy_box.dart:293:14)
+#6      RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#7      RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#8      RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#9      RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#10     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#11     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#12     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#13     ChildLayoutHelper.layoutChild (package:flutter/src/rendering/layout_helper.dart:62:11)
+#14     RenderStack._computeSize (package:flutter/src/rendering/stack.dart:646:43)
+#15     RenderStack.performLayout (package:flutter/src/rendering/stack.dart:673:12)
+#16     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#17     ChildLayoutHelper.layoutChild (package:flutter/src/rendering/layout_helper.dart:62:11)
+#18     RenderFlex._computeSizes (package:flutter/src/rendering/flex.dart:1161:28)
+#19     RenderFlex.performLayout (package:flutter/src/rendering/flex.dart:1255:32)
+#20     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#21     RenderPadding.performLayout (package:flutter/src/rendering/shifted_box.dart:243:12)
+#22     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#23     RenderConstrainedBox.performLayout (package:flutter/src/rendering/proxy_box.dart:293:14)
+#24     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#25     ChildLayoutHelper.layoutChild (package:flutter/src/rendering/layout_helper.dart:62:11)
+#26     _RenderDecoration._layout (package:flutter/src/material/input_decorator.dart:1023:67)
+#27     _RenderDecoration.performLayout (package:flutter/src/material/input_decorator.dart:1329:44)
+#28     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#29     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#30     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#31     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#32     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#33     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#34     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#35     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#36     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#37     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#38     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#39     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#40     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#41     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#42     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#43     ChildLayoutHelper.layoutChild (package:flutter/src/rendering/layout_helper.dart:62:11)
+#44     RenderFlex._computeSizes (package:flutter/src/rendering/flex.dart:1161:28)
+#45     RenderFlex.performLayout (package:flutter/src/rendering/flex.dart:1255:32)
+#46     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#47     RenderPadding.performLayout (package:flutter/src/rendering/shifted_box.dart:243:12)
+#48     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#49     _RenderSingleChildViewport.performLayout (package:flutter/src/widgets/single_child_scroll_view.dart:501:14)
+#50     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#51     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#52     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#53     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#54     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#55     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#56     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#57     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#58     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#59     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#60     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#61     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#62     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#63     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#64     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#65     RenderProxyBoxMixin.performLayout (package:flutter/src/rendering/proxy_box.dart:115:18)
+#66     _RenderCustomClip.performLayout (package:flutter/src/rendering/proxy_box.dart:1483:11)
+#67     RenderObject.layout (package:flutter/src/rendering/object.dart:2766:7)
+#68     MultiChildLayoutDelegate.layoutChild (package:flutter/src/rendering/custom_layout.dart:180:12)
+#69     _ScaffoldLayout.performLayout (package:flutter/src/material/scaffold.dart:1118:7)
+#70     MultiChildLayoutDelegate._callPerformLayout (package:flutter/src/rendering/custom_layout.dart:249:7)
+#71     RenderCustomMultiChildLayoutBox.performLayout (package:flutter/src/rendering/custom_layout.dart:419:14)
+#72     RenderObject._layoutWithoutResize (package:flutter/src/rendering/object.dart:2614:7)
+#73     PipelineOwner.flushLayout (package:flutter/src/rendering/object.dart:1160:18)
+#74     PipelineOwner.flushLayout (package:flutter/src/rendering/object.dart:1173:15)
+#75     RendererBinding.drawFrame (package:flutter/src/rendering/binding.dart:629:23)
+#76     WidgetsBinding.drawFrame (package:flutter/src/widgets/binding.dart:1242:13)
+#77     RendererBinding._handlePersistentFrameCallback (package:flutter/src/rendering/binding.dart:495:5)
+#78     SchedulerBinding._invokeFrameCallback (package:flutter/src/scheduler/binding.dart:1438:15)
+#79     SchedulerBinding.handleDrawFrame (package:flutter/src/scheduler/binding.dart:1351:9)
+#80     SchedulerBinding._handleDrawFrame (package:flutter/src/scheduler/binding.dart:1204:5)
+#81     _invoke (dart:ui/hooks.dart:331:13)
+#82     PlatformDispatcher._drawFrame (dart:ui/platform_dispatcher.dart:444:5)
+#83     _drawFrame (dart:ui/hooks.dart:303:31)
+
+The following RenderObject was being processed when the exception was fired: RenderFlex#8729e relayoutBoundary=up7 NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE:
+  creator: Row ← Align ← ConstrainedBox ← Semantics ← DropdownMenuItem<String> ← IgnorePointer ←
+    _Visibility ← _VisibilityScope ← Visibility ← _RawIndexedStack ← IndexedStack ← Row ← ⋯
+  parentData: offset=Offset(0.0, 0.0) (can use size)
+  constraints: BoxConstraints(0.0<=w<=Infinity, 0.0<=h<=24.0)
+  size: MISSING
+  direction: horizontal
+  mainAxisAlignment: start
+  mainAxisSize: max
+  crossAxisAlignment: center
+  textDirection: rtl
+  verticalDirection: down
+  spacing: 0.0
+This RenderObject had the following descendants (showing up to depth 5):
+    child 1: RenderConstrainedBox#30a2a NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+      child: RenderDecoratedBox#8e61c NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+        child: RenderPadding#4dc02 NEEDS-LAYOUT NEEDS-PAINT
+    child 2: RenderConstrainedBox#bdf62 NEEDS-LAYOUT NEEDS-PAINT
+    child 3: RenderFlex#5b09e NEEDS-LAYOUT NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+      child 1: RenderParagraph#07179 NEEDS-LAYOUT NEEDS-PAINT
+        text: TextSpan
+      child 2: RenderParagraph#59d77 NEEDS-LAYOUT NEEDS-PAINT
+        text: TextSpan
+════════════════════════════════════════════════════════════════════════════════════════════════════
+
+Another exception was thrown: RenderBox was not laid out: RenderFlex#8729e relayoutBoundary=up7 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPositionedBox#e5c5b relayoutBoundary=up6 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderConstrainedBox#54a6d relayoutBoundary=up5 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#5a439 relayoutBoundary=up4 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderIgnorePointer#be976 relayoutBoundary=up3 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: _RenderVisibility#ae8cd relayoutBoundary=up2 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderIndexedStack#dbd1a relayoutBoundary=up1 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderFlex#3d1fb NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPadding#56e9d NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderConstrainedBox#0601e relayoutBoundary=up20 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: _RenderDecoration#16f71 relayoutBoundary=up19 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#3d915 relayoutBoundary=up18 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#5d1a0 relayoutBoundary=up17 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderMouseRegion#6c624 relayoutBoundary=up16 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#fb618 relayoutBoundary=up15 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#0bbca relayoutBoundary=up14 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#78dc5 relayoutBoundary=up13 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#f83fd relayoutBoundary=up12 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+D/EGL_emulation(21490): app_time_stats: avg=55515.98ms min=8340.64ms max=102691.31ms count=2
+D/EGL_emulation(21490): app_time_stats: avg=1137.98ms min=2.00ms max=4159.07ms count=4
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+D/EGL_emulation(21490): app_time_stats: avg=114.41ms min=14.59ms max=347.08ms count=9
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderConstrainedBox#0601e relayoutBoundary=up20 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: _RenderDecoration#16f71 relayoutBoundary=up19 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#3d915 relayoutBoundary=up18 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#5d1a0 relayoutBoundary=up17 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderMouseRegion#6c624 relayoutBoundary=up16 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#fb618 relayoutBoundary=up15 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#0bbca relayoutBoundary=up14 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#78dc5 relayoutBoundary=up13 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#f83fd relayoutBoundary=up12 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: 'package:flutter/src/rendering/object.dart': Failed assertion: line 2700 pos 12: '!_debugDoingThisLayout': is not true.
+Another exception was thrown: RenderBox was not laid out: _RenderDecoration#16f71 relayoutBoundary=up19 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#3d915 relayoutBoundary=up18 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#5d1a0 relayoutBoundary=up17 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderMouseRegion#6c624 relayoutBoundary=up16 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#fb618 relayoutBoundary=up15 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#0bbca relayoutBoundary=up14 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#78dc5 relayoutBoundary=up13 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#f83fd relayoutBoundary=up12 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: 'package:flutter/src/rendering/object.dart': Failed assertion: line 2700 pos 12: '!_debugDoingThisLayout': is not true.
+Another exception was thrown: RenderBox was not laid out: _RenderDecoration#16f71 relayoutBoundary=up19 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#3d915 relayoutBoundary=up18 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#5d1a0 relayoutBoundary=up17 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderMouseRegion#6c624 relayoutBoundary=up16 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#fb618 relayoutBoundary=up15 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#0bbca relayoutBoundary=up14 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#78dc5 relayoutBoundary=up13 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#f83fd relayoutBoundary=up12 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+D/EGL_emulation(21490): app_time_stats: avg=28.91ms min=9.09ms max=126.53ms count=33
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: 'package:flutter/src/rendering/object.dart': Failed assertion: line 2700 pos 12: '!_debugDoingThisLayout': is not true.
+Another exception was thrown: RenderBox was not laid out: _RenderDecoration#16f71 relayoutBoundary=up19 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#3d915 relayoutBoundary=up18 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#5d1a0 relayoutBoundary=up17 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderMouseRegion#6c624 relayoutBoundary=up16 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#fb618 relayoutBoundary=up15 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#0bbca relayoutBoundary=up14 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#78dc5 relayoutBoundary=up13 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#f83fd relayoutBoundary=up12 NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: RenderBox was not laid out: RenderCustomPaint#ae45b NEEDS-LAYOUT NEEDS-PAINT
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+Another exception was thrown: Cannot hit test a render box that has never been laid out.
+D/EGL_emulation(21490): app_time_stats: avg=13688.66ms min=8.76ms max=410173.38ms count=30
+D/EGL_emulation(21490): app_time_stats: avg=55.10ms min=2.12ms max=792.97ms count=19
+D/EGL_emulation(21490): app_time_stats: avg=29.69ms min=4.68ms max=682.23ms count=47
+D/EGL_emulation(21490): app_time_stats: avg=12.44ms min=2.64ms max=221.37ms count=48
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [account] not found
+I/flutter (21490): [🌎 Easy Localization] [WARNING] Localization key [notes] not found
+Another exception was thrown: RenderFlex children have non-zero flex but incoming width constraints are unbounded.
+Another exception was thrown: RenderBox was not laid out: RenderFlex#70944 relayoutBoundary=up7 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPositionedBox#39e2e relayoutBoundary=up6 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderConstrainedBox#66917 relayoutBoundary=up5 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#3bc53 relayoutBoundary=up4 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderIgnorePointer#51c1a relayoutBoundary=up3 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: _RenderVisibility#e1361 relayoutBoundary=up2 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderIndexedStack#fe350 relayoutBoundary=up1 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderFlex#d32fe NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPadding#946e5 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderConstrainedBox#8a9f8 relayoutBoundary=up20 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: _RenderDecoration#346b1 relayoutBoundary=up19 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#28c9a relayoutBoundary=up18 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#bffe3 relayoutBoundary=up17 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderMouseRegion#0f27b relayoutBoundary=up16 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#e8d98 relayoutBoundary=up15 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#a024a relayoutBoundary=up14 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#d476b relayoutBoundary=up13 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#a9bf2 relayoutBoundary=up12 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderFlex#cccd2 relayoutBoundary=up11 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPadding#c3776 relayoutBoundary=up10 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: _RenderSingleChildViewport#bc551 relayoutBoundary=up9 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderIgnorePointer#43df4 relayoutBoundary=up8 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsAnnotations#2cfcb relayoutBoundary=up7 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#bec2d relayoutBoundary=up6 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderSemanticsGestureHandler#d6907 relayoutBoundary=up5 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderPointerListener#9f0bb relayoutBoundary=up4 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: _RenderScrollSemantics#870a2 relayoutBoundary=up3 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderTransform#823f1 relayoutBoundary=up2 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+Another exception was thrown: RenderBox was not laid out: RenderClipRect#8ec22 relayoutBoundary=up1 NEEDS-PAINT NEEDS-COMPOSITING-BITS-UPDATE
+D/EGL_emulation(21490): app_time_stats: avg=23.05ms min=3.66ms max=706.33ms count=39
+Another exception was thrown: RenderBox was not laid out: RenderTransform#823f1 relayoutBoundary=up2
+
